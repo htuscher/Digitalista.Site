@@ -1,0 +1,63 @@
+/**
+*	RSS Feed
+*/
+root.rssFeed {
+    condition = ${Array.last(String.split(request.parentRequest.uri.path, '/')) == 'rss.xml' && q(documentNode).is('[instanceof Jhoechtl.Digitalista:Category]')}
+    type = 'Jhoechtl.Digitalista.Rss:RssV2'
+    @position = 'start'
+}
+
+prototype(Jhoechtl.Digitalista.Rss:RssV2) < prototype(TYPO3.TypoScript:Http.Message) {
+    httpResponseHead {
+       headers.Content-Type = 'application/rss+xml'
+    }
+
+    xmlProlog = '<?xml version="1.0" encoding="UTF-8"?>'
+    xmlProlog.@position = 'start 100'
+
+    rssV2 = TYPO3.TypoScript:Template {
+        templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/RSSV2.xml'
+        sectionName = 'main'
+
+        node = ${documentNode}
+        @override.newsItems = ${q(documentNode).find('[instanceof Jhoechtl.Digitalista:News]')}
+
+        items = TYPO3.TypoScript:Collection {
+            collection = ${newsItems}
+            itemName = 'newsItem'
+            itemRenderer = TYPO3.TypoScript:Template {
+                templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/RSSV2.xml'
+                sectionName = 'item'
+
+                newsItem = ${newsItem}
+                atomLink = TYPO3.TypoScript:Tag {
+                    tagName = 'atom:link'
+                    attributes {
+                        rel = 'self'
+                        type = 'application/rss+xml'
+                        href = TYPO3.Neos:NodeUri {
+                            node = ${documentNode}
+                            absolute = TRUE
+                        }
+                    }
+                    selfClosingTag = TRUE
+                }
+                main = TYPO3.Neos:ContentCollection {
+                    nodePath = 'main'
+                    @override.node = ${newsItem}
+                }
+            }
+        }
+
+        @position = 'after doctype'
+        @cache {
+            mode = 'uncached'
+            context {
+                1 = 'documentNode'
+            }
+            entryTags {
+                1 = 'NodeType_Helmich.Homepage:BlogArticle'
+            }
+        }
+    }
+}

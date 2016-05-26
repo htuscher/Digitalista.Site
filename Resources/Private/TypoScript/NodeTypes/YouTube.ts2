@@ -1,0 +1,6 @@
+##
+# "YouTube" element
+#
+prototype(Site:YouTube) < prototype(Content) {
+	attributes.class = ${'embed-responsive embed-responsive-' + q(node).property('ratio')}
+}

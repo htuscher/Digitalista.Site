@@ -1,0 +1,50 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+{namespace dig=Jhoechtl\Digitalista\ViewHelpers}
+<f:if condition="{node.context.workspace.name} != 'live'">
+	<f:then>
+		<figure class="tile tile-{heightMultiplier}y" style="background-image: url({f:if(condition: backgroundImageUri,then:backgroundImageUri,else:'{f:uri.resource(package: \'TYPO3.Neos\', path: \'Images/dummy-image.svg\')}')});">
+			<f:if condition="{image}">
+				<f:then>
+					<media:image image="{image}" alt="{alternativeText}" title="{title}" maximumHeight="{maximumHeight}" allowCropping="{allowCropping}" />
+				</f:then>
+				<f:else>
+					<img src="{f:uri.resource(package: 'TYPO3.Neos', path: 'Images/dummy-image.svg')}" title="Dummy image" alt="Dummy image" class="neos-handle" />
+				</f:else>
+			</f:if>
+			<div class="tile-caption">
+				{neos:contentElement.editable(property: 'caption', node: node, tag: 'h2')}
+			</div>
+		</figure>
+	</f:then>
+	<f:else>
+		<f:if condition="{link}">
+			<f:then>
+			<a href="{link}">
+				<figure class="tile tile-{heightMultiplier}y" style="{f:if(condition: backgroundImageUri,then:'background-image: url({backgroundImageUri});')}">
+					<f:if condition="{image}">
+						<media:image image="{image}" alt="{alternativeText}" title="{title}" maximumHeight="{maximumHeight}" allowCropping="{allowCropping}" />
+					</f:if>
+					<div class="tile-caption">
+						{neos:contentElement.editable(property: 'caption', node: node, tag: 'h2')}
+					</div>
+					<div class="comment-count">
+						<i class="fa fa-comment"></i> <span class="fb-comments-count" data-href="{neos:uri.node(node:'~',absolute:1) -> dig:trailingSlash(ensureTrailingSlash:0)}{link}">0</span>
+					</div>
+				</figure>
+			</a>
+			</f:then>
+			<f:else>
+				<figure class="tile tile-{heightMultiplier}y" style="{f:if(condition: backgroundImageUri,then:'background-image: url({backgroundImageUri});')}">
+					<f:if condition="{image}">
+						<media:image image="{image}" alt="{alternativeText}" title="{title}" maximumHeight="{maximumHeight}" allowCropping="{allowCropping}" />
+					</f:if>
+					<div class="tile-caption">
+						{neos:contentElement.editable(property: 'caption', node: node, tag: 'h2')}
+					</div>
+				</figure>
+			</f:else>
+		</f:if>
+	</f:else>
+</f:if>

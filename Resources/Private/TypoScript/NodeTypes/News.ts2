@@ -1,0 +1,192 @@
+newsDetail < page
+newsDetail {
+	head {
+		titleTag {
+			content = ${q(node).property('title') + ' - digitalista'}
+		}
+		twitterCard {
+			@if.isEnabled = ${true}
+			@if.isEnabledBlank = ${true}
+			cardTypeTag.attributes.content = 'summary'
+			cardTitleTag.@if.isNotBlank = ${!String.isBlank(q(node).property('subTitle'))}
+			cardTitleTag.attributes.content = ${q(node).property('subTitle')}
+			cardDescriptionTag.@if.isNotBlank = ${!String.isBlank(q(node).property('teaser'))}
+			cardDescriptionTag.attributes.content = ${q(node).property('teaser')}
+			cardImageTag.@if.isImageSet = ${q(node).property('image') != null}
+			cardImageTag.attributes.content.asset = ${q(node).property('image')}
+		}
+		openGraphMetaTags {
+			@if.isEnabled = ${true}
+			openGraphTypeTag{
+				attributes.content = 'Article'
+				attributes.name >
+				attributes.property = 'og:type'
+			}
+			openGraphTitleTag {
+				@if.isNotBlank = ${!String.isBlank(q(node).property('subTitle'))}
+				attributes.content = ${q(node).property('subTitle')}
+				attributes.name >
+				attributes.property = 'og:title'
+			}
+			openGraphDescriptionTag {
+				@if.isNotBlank = ${!String.isBlank(q(node).property('teaser'))}
+				attributes.content = ${q(node).property('teaser')}
+				attributes.name >
+				attributes.property = 'og:description'
+			}
+			openGraphImageTag {
+				@if.isImageSet = ${q(node).property('image') != null}
+				attributes.content.asset = ${q(node).property('image')}
+				attributes.name >
+				attributes.property = 'og:image'
+			}
+			facebookAppIdTag = TYPO3.TypoScript:Tag {
+				tagName = 'meta'
+				attributes {
+					property = 'fb:app_id'
+					content = '395237300636316'
+				}
+			}
+		}
+		metaDescriptionTag = TYPO3.TypoScript:Tag {
+			tagName = 'meta'
+			attributes {
+				name = 'description'
+				content = ${q(node).property('teaser')}
+			}
+			@if.isNotBlank = ${!String.isBlank(q(node).property('teaser'))}
+		}
+	}
+
+	bodyTopScripts = TYPO3.TypoScript:Template {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+		sectionName = 'bodyTopScripts'
+		@position = 'before body'
+	}
+
+	body {
+		node = ${node}
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/NewsDetail.html'
+		newsTitle = ${q(node).property('newsTitle')}
+		subTitle = ${q(node).property('subTitle')}
+		author = ${q(node).property('author')}
+		creationDate = ${q(node).property('creationDate')}
+		tags = ${q(node).property('tags')}
+		source = ${q(node).property('source')}
+		sourceUrl = ${q(node).property('sourceUrl')}
+		facebookShares = ${q(node).property('facebookShares')}
+		twitterShares = ${q(node).property('twitterShares')}
+
+		# This is used for editing the news preview in the Backend context
+		singleNewsList = ${[node]}
+
+		prevNews = ${Digitalista.Node.inCollectionPrevToNode(q(node).parents('[instanceof Jhoechtl.Digitalista:Category]').last().find('[instanceof Jhoechtl.Digitalista:News]').sort('creationDate', 'ASC').get(), node)}
+		nextNews = ${Digitalista.Node.inCollectionNextToNode(q(node).parents('[instanceof Jhoechtl.Digitalista:Category]').last().find('[instanceof Jhoechtl.Digitalista:News]').sort('creationDate', 'ASC').get(), node)}
+		languageMenu = TYPO3.Neos:DimensionMenu {
+			dimension = 'language'
+			templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/NewsLanguageMenu.html'
+			currentLanguage = ${node.dimensions['language'][0]}
+			@if.condition = ${Type.className(q(node).context({'dimensions': {'language': ['en']}, 'targetDimensions': {'language': 'en'}}).get(0)) == 'TYPO3\TYPO3CR\Domain\Model\Node'}
+		}
+
+		forms {
+			report = Onedrop.AjaxForm:Form {
+				formIdentifier = 'report-news-form'
+				presetName = 'bootstrap'
+			}
+			recommend = Onedrop.AjaxForm:Form {
+				formIdentifier = 'recommend-news-form'
+				presetName = 'bootstrap'
+			}
+		}
+
+		content {
+			gallery = ContentCollection {
+				nodePath = 'gallery'
+			}
+			galleryItems = ${q(node).children('gallery').children('[instanceof Jhoechtl.Digitalista:GalleryItem]').slice(0,3).get()}
+			galleryItemsCount = ${q(node).children('gallery').children('[instanceof Jhoechtl.Digitalista:GalleryItem]').count()}
+		}
+		galleryNode = ${q(node).children('[instanceof Jhoechtl.Digitalista:NewsGallery]').get(0)}
+	}
+}
+
+category < page
+category {
+	body {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Category.html'
+		prototype(Jhoechtl.Digitalista:NewsList) {
+			newsList = ${q(node).closest('[instanceof Jhoechtl.Digitalista:Category]').find('[instanceof Jhoechtl.Digitalista:News]').get()}
+		}
+	}
+}
+
+tags < page
+tags {
+	body {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Tags.html'
+	}
+}
+
+tag < page
+tag {
+	body {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Tag.html'
+		prototype(Jhoechtl.Digitalista:NewsList) {
+			newsList = ${q(site).find('[instanceof Jhoechtl.Digitalista:News]').related('tags', q(node).parents('[instanceof Jhoechtl.Digitalista:Tag]').get(0)).get()}
+		}
+	}
+}
+
+author < page
+author {
+	body {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Author.html'
+		content {
+			authorName = ${q(node).property('name')}
+			newsList = Jhoechtl.Digitalista:NewsList {
+				newsList = ${q(site).find('[instanceof Jhoechtl.Digitalista:News]').related('author', this.node).get()}
+				maxNumberOfItems = ${5}
+			}
+		}
+	}
+}
+
+galleryPage < page
+galleryPage {
+	body {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/GalleryPage.html'
+		javascripts.juicebox = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/GalleryPage.html'
+			sectionName = 'juicebox'
+			@position = 'end 9999'
+		}
+		parentArticle = ${q(node).parents('[instanceof Jhoechtl.Digitalista:News]').get(0)}
+	}
+}
+
+#
+#	Basic functionality of every newsList
+#
+prototype(Jhoechtl.Digitalista:NewsList) {
+	templatePath = 'resource://Jhoechtl.Digitalista/Private/Partials/News/List.html'
+	@override.configuration = ${Configuration.setting('Jhoechtl.Digitalista.newsList')}
+	configuration = ${configuration}
+	newsList = ${q(site).find('[instanceof Jhoechtl.Digitalista:News]').get()}
+	newsList.@process.sort = ${q(value).count() > 0 ? q(value).sort('creationDate', 'DESC').get() : value}
+	maxNumberOfItems = ${String.toInteger(configuration.maxNumberOfItems)}
+	@cache {
+		mode = 'cached'
+		entryIdentifier {
+			pagination = ${request.pluginArguments.newsList.currentPage}
+			node = ${node}
+		}
+		entryTags {
+			1 = ${'NodeType_Jhoechtl.Digitalista:News'}
+		}
+	}
+}
+
+prototype(TYPO3.TypoScript:GlobalCacheIdentifiers) {
+	newsPagination = ${request.pluginArguments.newsList.currentPage}
+}

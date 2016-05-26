@@ -1,0 +1,20 @@
+
+'Jhoechtl.Digitalista:Banderole':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    icon: icon-flag
+    label: Banderole
+  properties:
+    title:
+      type: string
+      defaultValue: 'The <em>Banderole</em>'
+      ui:
+        inlineEditable: true
+        aloha:
+          format:
+            - em
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Jhoechtl.Digitalista" source-language="en" datatype="plaintext" target-language="de">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>News article</source>
+				<target xml:lang="de">News Artikel</target>
+			</trans-unit>
+			<trans-unit id="properties.creationDate" xml:space="preserve">
+				<source>Creation date</source>
+				<target xml:lang="de">Erstellungsdatum</target>
+			</trans-unit>
+			<trans-unit id="properties.title" xml:space="preserve">
+				<source>Article title</source>
+				<target xml:lang="de">Beitragstitel</target>
+			</trans-unit>
+			<trans-unit id="properties.teaser" xml:space="preserve">
+				<source>Teaser text</source>
+				<target xml:lang="de">Einleitungstext</target>
+			</trans-unit>
+			<trans-unit id="properties.teaser.ui.help.message" xml:space="preserve">
+				<source>This text is displayed when this article is shown in a list. It cannot exceed 200 characters.</source>
+				<target xml:lang="de">Dieser Text wird angezeigt, wenn dieser Artikel in einer Liste ausgegeben wird. Er darf nur eine Länge von 200 Zeichen besitzen.</target>
+			</trans-unit>
+			<trans-unit id="properties.author" xml:space="preserve">
+				<source>Author</source>
+				<target xml:lang="de">Autor</target>
+			</trans-unit>
+			<trans-unit id="properties.related" xml:space="preserve">
+				<source>Related news articles</source>
+				<target xml:lang="de">Ähnliche Artikel</target>
+			</trans-unit>
+			<trans-unit id="properties.tags" xml:space="preserve">
+				<source>Article tags</source>
+				<target xml:lang="de">Tags</target>
+			</trans-unit>
+			<trans-unit id="properties.source" xml:space="preserve">
+				<source>Source</source>
+				<target xml:lang="de">Quelle</target>
+			</trans-unit>
+			<trans-unit id="properties.sourceUrl" xml:space="preserve">
+				<source>Source URL</source>
+				<target xml:lang="de">URL der Quelle</target>
+			</trans-unit>
+			<trans-unit id="tabs.newslist" xml:space="preserve">
+				<source>Article image</source>
+				<target xml:lang="de">Artikelbild</target>
+			</trans-unit>
+			<trans-unit id="groups.general" xml:space="preserve">
+				<source>General</source>
+				<target xml:lang="de">Generelles</target>
+			</trans-unit>
+			<trans-unit id="groups.related" xml:space="preserve">
+				<source>Relations</source>
+				<target xml:lang="de">Verknüpfungen</target>
+			</trans-unit>
+			<trans-unit id="groups.source" xml:space="preserve">
+				<source>Source</source>
+				<target xml:lang="de">Quellangaben</target>
+			</trans-unit>
+			<!-- Labels on page -->
+			<trans-unit id="By" xml:space="preserve">
+				<source>By</source>
+				<target xml:lang="de">Von</target>
+			</trans-unit>
+			<trans-unit id="creation_date" xml:space="preserve">
+				<source> on {date} at {time}</source>
+				<target xml:lang="de"> am {date} um {time} Uhr</target>
+			</trans-unit>
+			<trans-unit id="Source" xml:space="preserve">
+				<source>Source</source>
+				<target xml:lang="de">Quelle</target>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

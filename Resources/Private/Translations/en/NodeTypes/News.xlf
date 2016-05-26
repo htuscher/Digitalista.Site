@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Jhoechtl.Digitalista" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="ui.label" xml:space="preserve">
+				<source>News article</source>
+			</trans-unit>
+			<trans-unit id="properties.creationDate" xml:space="preserve">
+				<source>Creation date</source>
+			</trans-unit>
+			<trans-unit id="properties.title" xml:space="preserve">
+				<source>Article title</source>
+			</trans-unit>
+			<trans-unit id="properties.teaser" xml:space="preserve">
+				<source>Teaser text</source>
+			</trans-unit>
+			<trans-unit id="properties.teaser.ui.help.message" xml:space="preserve">
+				<source>This text is displayed when this article is shown in a list. It cannot exceed 200 characters.</source>
+			</trans-unit>
+			<trans-unit id="properties.author" xml:space="preserve">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="properties.related" xml:space="preserve">
+				<source>Related news articles</source>
+			</trans-unit>
+			<trans-unit id="properties.tags" xml:space="preserve">
+				<source>Article tags</source>
+			</trans-unit>
+			<trans-unit id="properties.source" xml:space="preserve">
+				<source>Source</source>
+			</trans-unit>
+			<trans-unit id="properties.sourceUrl" xml:space="preserve">
+				<source>Source URL</source>
+			</trans-unit>
+			<trans-unit id="tabs.newslist" xml:space="preserve">
+				<source>Article image</source>
+			</trans-unit>
+			<trans-unit id="groups.general" xml:space="preserve">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="groups.related" xml:space="preserve">
+				<source>Relations</source>
+			</trans-unit>
+			<trans-unit id="groups.source" xml:space="preserve">
+				<source>Source</source>
+			</trans-unit>
+			<!-- Labels on page -->
+			<trans-unit id="By" xml:space="preserve">
+				<source>By</source>
+			</trans-unit>
+			<trans-unit id="creation_date" xml:space="preserve">
+				<source> on {date} at {time}</source>
+			</trans-unit>
+			<trans-unit id="Source" xml:space="preserve">
+				<source>Source</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

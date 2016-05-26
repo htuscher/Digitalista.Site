@@ -1,0 +1,3 @@
+prototype(TYPO3.Neos.NodeTypes:Html) {
+	templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/NodeTypes/Html.html'
+}

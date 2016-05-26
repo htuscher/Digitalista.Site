@@ -1,0 +1,32 @@
+/**
+*	Google Sitemap copied from Flowpack.Plugin.Sitemap
+*/
+root.googleSitemap {
+	condition = ${request.parentRequest.uri.path == 'sitemap.xml' || Array.last(String.split(request.parentRequest.uri.path, '/')) == 'sitemap.xml'}
+	type = 'Jhoechtl.Digitalista.Sitemap:GoogleSiteMap'
+	@position = 'start'
+}
+
+prototype(Jhoechtl.Digitalista.Sitemap:GoogleSiteMap) < prototype(TYPO3.TypoScript:Http.Message) {
+	httpResponseHead {
+		headers {
+			Content-Type = 'application/xml'
+		}
+	}
+
+	xmlProlog = '<?xml version="1.0" encoding="UTF-8"?>'
+	xmlProlog.@position = 'start 100'
+
+	urlset = TYPO3.Neos:Menu {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/GoogleSitemap.xml'
+
+		attributes = TYPO3.TypoScript:Attributes {
+			xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+		}
+
+		maximumLevels = 20
+		renderHiddenInIndex = TRUE
+
+		@position = 'after doctype'
+	}
+}

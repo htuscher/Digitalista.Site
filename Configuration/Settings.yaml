@@ -1,0 +1,99 @@
+TYPO3:
+  TYPO3CR:
+    contentDimensions:
+      'language':
+        label: 'Language'
+        icon: 'icon-language'
+        default: 'de'
+        defaultPreset: 'de'
+        presets:
+          'de':
+            label: 'Deutsch'
+            values: ['de']
+            uriSegment: ''
+          'en':
+            label: 'English'
+            values: ['en']
+            uriSegment: 'en'
+  Flow:
+    error:
+      exceptionHandler:
+        renderingGroups:
+          notFoundExceptions:
+            options:
+              templatePathAndFilename: 'resource://Jhoechtl.Digitalista/Private/Templates/404.html'
+              variables:
+                path: '404.html'
+  Form:
+    yamlPersistenceManager:
+      savePath: 'resource://Jhoechtl.Digitalista/Private/Form/'
+    presets:
+      bootstrap:
+        title: 'Twitter bootstrap'
+        parentPreset: 'default'
+        formElementTypes:
+          'TYPO3.Form:Base':
+            renderingOptions:
+              partialPathPattern: 'resource://Jhoechtl.Digitalista/Private/Partials/Forms/{@type}.html'
+              layoutPathPattern: 'resource://Jhoechtl.Digitalista/Private/Templates/Forms/{@type}.html'
+              translationPackage: 'Jhoechtl.Digitalista'
+          'TYPO3.Form:FormElement':
+            properties:
+              elementClassAttribute: 'form-control'
+          'TYPO3.Form:MultiLineText':
+            properties:
+              elementClassAttribute: 'form-control'
+  Neos:
+    Seo:
+      twitterCard:
+        siteHandle: '@digitalistaDE'
+    typoScript:
+      autoInclude:
+        'Jhoechtl.Digitalista': TRUE
+    nodeTypes:
+      groups:
+        news:
+          position: 200
+          label: 'News'
+    userInterface:
+      translation:
+        autoInclude:
+          'Jhoechtl.Digitalista': ['NodeTypes/*']
+      editPreviewModes:
+        print:
+          isEditingMode: FALSE
+          isPreviewMode: TRUE
+          typoScriptRenderingPath: 'print'
+          title: 'Print'
+          position: 200
+  TypoScript:
+    defaultContext:
+      'Digitalista.Node': 'Jhoechtl\Digitalista\TypoScript\Helper\NodeHelper'
+
+Jhoechtl:
+  Digitalista:
+    enableAMP: FALSE
+    newsList:
+      maxNumberOfItems: 10
+    baseDomain: 'https://www.digitalista.de/'
+    siteName: 'digitalista'
+    autoMove:
+      pickupPath: '/sites/digitalista/entwurfe'
+      maximumAgeForShortcutNodes: 'P2D'
+      matchPaths:
+        '/sites/digitalista/entwurfe/magazin': '/sites/digitalista/node-552a4754e838f'
+        '/sites/digitalista/entwurfe/interviews': '/sites/digitalista/node-559a6337ce3f9'
+        '/sites/digitalista/entwurfe/sounds': '/sites/digitalista/node-559a633e80633'
+
+
+Flowpack:
+  ElasticSearch:
+    indexes:
+      default:
+        'typo3cr': # This index name must be the same as in the TYPO3.TYPO3CR.Search.elasticSearch.indexName setting
+          analysis:
+            analyzer:
+              autocomplete:
+                tokenizer: 'standard'
+                type: 'custom'
+                filter: ['standard', 'lowercase', 'stop', 'kstem', 'ngram']

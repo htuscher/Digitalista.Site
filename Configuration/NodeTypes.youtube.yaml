@@ -1,0 +1,36 @@
+
+'Jhoechtl.Digitalista:YouTube':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: YouTube
+    icon: icon-youtube
+    inspector:
+      groups:
+        video:
+          label: Video
+          position: 50
+  properties:
+    video:
+      type: string
+      defaultValue: ''
+      ui:
+        label: 'Youtube video ID'
+        reloadIfChanged: true
+        inspector:
+          group: video
+    ratio:
+      type: string
+      defaultValue: 16by9
+      ui:
+        label: Ratio
+        reloadIfChanged: true
+        inspector:
+          group: video
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            values:
+              16by9:
+                label: '16:9'
+              4by3:
+                label: '4:3'

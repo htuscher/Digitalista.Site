@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+<head>
+</head>
+<body>
+<f:section name="body">
+	<header>
+		<f:comment>
+		<f:render partial="Header/Logo" arguments="{_all}" />
+		</f:comment>
+	</header>
+	<main>
+		{content.main -> f:format.raw()}
+	</main>
+	<footer>
+		<nav class="row">
+			<div class="col-md-16">
+				{parts.footerMenu -> f:format.raw()}
+
+				<f:render partial="Footer/SocialIcons" />
+			</div>
+		</nav>
+		<div class="row copyright">
+			<neos:contentElement.wrap node="{node}">
+				<div class="col-md-12 text-center">
+					<neos:contentElement.editable property="copyright" tag="div" />
+				</div>
+			</neos:contentElement.wrap>
+		</div>
+		<a href="#" class="anchor" title="nach oben"><span class="fa fa-chevron-circle-up"></span></a>
+	</footer>
+</f:section>
+</body>
+</html>

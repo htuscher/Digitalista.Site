@@ -1,0 +1,35 @@
+
+'Jhoechtl.Digitalista:PageViews':
+  superTypes:
+    'TYPO3.Neos:Plugin': true
+  ui:
+    label: 'Most viewed news'
+    icon: icon-rss
+    inspector:
+      groups:
+        feed:
+          label: Feed
+  options:
+    pluginViews:
+      MostShared:
+        label: 'Most shared'
+        controllerActions:
+          Jhoechtl\Digitalista\Controller\PageViewController:
+            - shares
+  properties:
+    days:
+      type: integer
+      defaultValue: 1
+      ui:
+        label: 'Most viewed in past days'
+        reloadIfChanged: true
+        inspector:
+          group: feed
+    numberOfItems:
+      type: integer
+      defaultValue: 5
+      ui:
+        label: 'Number of entries'
+        reloadIfChanged: true
+        inspector:
+          group: feed

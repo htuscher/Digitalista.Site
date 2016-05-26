@@ -1,0 +1,37 @@
+/**
+*	Juicebox Gallery config.xml
+*/
+root.juiceboxGallery {
+	condition = ${request.parentRequest.uri.path == 'config.xml' || Array.last(String.split(request.parentRequest.uri.path, '/')) == 'config.xml'}
+	type = 'Jhoechtl.Digitalista.Juicebox:Gallery'
+	@position = 'start'
+}
+
+prototype(Jhoechtl.Digitalista.Juicebox:Gallery) < prototype(TYPO3.TypoScript:Http.Message) {
+	httpResponseHead {
+		headers {
+			Content-Type = 'application/xml'
+		}
+	}
+
+	xmlProlog = '<?xml version="1.0" encoding="UTF-8"?>'
+	xmlProlog.@position = 'start 100'
+
+	juiceboxgallery = TYPO3.TypoScript:Template {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/JuiceboxGallery.xml'
+
+		attributes = TYPO3.TypoScript:Attributes {
+			maxImageWidth = '900'
+			maxImageHeight = '500'
+			imageQuality = '50'
+			cropToFit = 'true'
+			useFlickr = 'false'
+			resizeOneImport = 'false'
+		}
+
+		node = ${node}
+		galleryItems = ${q(node).find('[instanceof Jhoechtl.Digitalista:GalleryItem]').get()}
+
+		@position = 'after doctype'
+	}
+}

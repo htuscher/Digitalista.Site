@@ -1,0 +1,11 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<div{attributes -> f:format.raw()}>
+	<f:if condition="{video}">
+		<f:then>
+			<iframe class="embed-responsive-item" src="//www.youtube.com/embed/{video}?wmode=transparent" frameborder="0" allowfullscreen="1"></iframe>
+		</f:then>
+		<f:else>
+			<p>Please specify video ID</p>
+		</f:else>
+	</f:if>
+</div>

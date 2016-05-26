@@ -1,0 +1,408 @@
+
+'Jhoechtl.Digitalista:News':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:ImageMixin': true
+    'TYPO3.Neos.NodeTypes:Page': true
+  childNodes:
+    main:
+      constraints:
+        nodeTypes:
+          '*': false
+          'TYPO3.Neos.NodeTypes:Headline': true
+          'TYPO3.Neos.NodeTypes:Text': true
+          'TYPO3.Neos.NodeTypes:Image': true
+          'TYPO3.Neos.NodeTypes:TextWithImage': true
+          'TYPO3.Neos.NodeTypes:Html': true
+          'TYPO3.Neos.NodeTypes:TwoColumn': true
+          'Jhoechtl.Digitalista:TileTwoColumn': false
+          'TYPO3.Neos.NodeTypes:ThreeColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': false
+          'TYPO3.Neos.NodeTypes:FourColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': false
+          'Jhoechtl.Digitalista:Banderole': true
+          'Jhoechtl.Digitalista:YouTube': true
+    gallery:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:GalleryItem': true
+  constraints:
+    nodeTypes:
+      'Jhoechtl.Digitalista:NewsGallery': true
+      '*': false
+  ui:
+    label: i18n
+    icon: icon-edit
+    group: news
+    inspector:
+      tabs:
+        newslist:
+          label: i18n
+          position: 10
+          icon: icon-picture
+      groups:
+        general:
+          label: i18n
+          position: 10
+        related:
+          label: i18n
+        source:
+          label: i18n
+        image:
+          tab: newslist
+        twittercard:
+          tab: _none
+        openGraph:
+          tab: _none
+  properties:
+    metaDescription:
+      ui:
+        inspector:
+          group: _none
+    layout:
+      type: string
+      defaultValue: newsDetail
+    title:
+      ui:
+        label: i18n
+        inspector:
+          position: 5
+    image:
+      ui:
+        reloadIfChanged: true
+    creationDate:
+      type: DateTime
+      defaultValue: now
+      ui:
+        label: i18n
+        inspector:
+          group: general
+          position: 5
+          editorOptions:
+            format: 'd-m-Y H:i'
+      validation:
+        TYPO3.Neos/Validation/DateTimeValidator: {  }
+        TYPO3.Neos/Validation/NotEmptyValidator: { }
+    newsTitle:
+      type: string
+      defaultValue: 'The Title'
+      search:
+        fulltextExtractor: ${Indexing.extractInto('h1', value)}
+      ui:
+        inlineEditable: true
+        inspector:
+          group: null
+        aloha:
+          placeholder: 'Enter title here'
+          format: {  }
+          table: {  }
+          list: {  }
+          link: {  }
+          removeFormat: true
+    subTitle:
+      type: string
+      defaultValue: 'The Subtitle'
+      search:
+        fulltextExtractor: ${Indexing.extractInto('h2', value)}
+      ui:
+        inlineEditable: true
+        inspector:
+          group: null
+        aloha:
+          placeholder: 'Enter subtitle here'
+          format: {  }
+          table: {  }
+          list: {  }
+          link: {  }
+          removeFormat: true
+    teaser:
+      type: string
+      search:
+        fulltextExtractor: ${Indexing.extractInto('h4', value)}
+      ui:
+        label: i18n
+        inlineEditable: true
+        reloadIfChanged: true
+        help:
+          message: i18n
+        inspector:
+          group: document
+          position: 10
+          editor: TYPO3.Neos/Inspector/Editors/TextAreaEditor
+          editorOptions:
+            placeholder: 'max. 200 characters'
+        aloha:
+          placeholder: 'Enter teaser here'
+          format:
+            - b
+            - em
+            - p
+          table: {  }
+          list: {  }
+          link: {  }
+      validation:
+        'TYPO3.Neos/Validation/StringLengthValidator':
+          maximum: 200
+    author:
+      type: reference
+      ui:
+        label: i18n
+        inspector:
+          group: related
+          editorOptions:
+            nodeTypes:
+              - 'Jhoechtl.Digitalista:Author'
+    related:
+      type: references
+      ui:
+        label: i18n
+        inspector:
+          group: related
+          editorOptions:
+            nodeTypes:
+              - 'Jhoechtl.Digitalista:News'
+    tags:
+      type: references
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: related
+          editorOptions:
+            nodeTypes:
+              - 'Jhoechtl.Digitalista:Tag'
+    source:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: source
+    sourceUrl:
+      type: string
+      ui:
+        label: i18n
+        reloadIfChanged: true
+        inspector:
+          group: source
+    titleOverride:
+      ui:
+        inspector:
+          group: seometa
+    facebookShares:
+      type: int
+    twitterShares:
+      type: int
+    googleShares:
+      type: int
+
+'Jhoechtl.Digitalista:Category':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': true
+  constraints:
+    nodeTypes:
+      'Jhoechtl.Digitalista:Category': TRUE
+      'Jhoechtl.Digitalista:News': TRUE
+      '*': FALSE
+  ui:
+    label: i18n
+    icon: icon-book
+    group: news
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'TYPO3.Neos.NodeTypes:Headline': true
+          'TYPO3.Neos.NodeTypes:Text': true
+          'TYPO3.Neos.NodeTypes:Image': true
+          'TYPO3.Neos.NodeTypes:TextWithImage': true
+          'TYPO3.Neos.NodeTypes:Html': true
+          'TYPO3.Neos.NodeTypes:TwoColumn': true
+          'Jhoechtl.Digitalista:TileTwoColumn': false
+          'TYPO3.Neos.NodeTypes:ThreeColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': false
+          'TYPO3.Neos.NodeTypes:FourColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': false
+          'Jhoechtl.Digitalista:Banderole': true
+          'Jhoechtl.Digitalista:NewsList': true
+          'Jhoechtl.Digitalista:YouTube': true
+  properties:
+    layout:
+      type: string
+      defaultValue: category
+
+'Jhoechtl.Digitalista:Tags':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': true
+  constraints:
+    nodeTypes:
+      '*': false
+      'Jhoechtl.Digitalista:Tag': true
+  ui:
+    label: i18n
+    icon: icon-tags
+    group: news
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'TYPO3.Neos.NodeTypes:Headline': true
+          'TYPO3.Neos.NodeTypes:Text': true
+          'TYPO3.Neos.NodeTypes:Image': true
+          'TYPO3.Neos.NodeTypes:TextWithImage': true
+          'TYPO3.Neos.NodeTypes:Html': true
+          'TYPO3.Neos.NodeTypes:TwoColumn': true
+          'Jhoechtl.Digitalista:TileTwoColumn': false
+          'TYPO3.Neos.NodeTypes:ThreeColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': false
+          'TYPO3.Neos.NodeTypes:FourColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': false
+          'Jhoechtl.Digitalista:Banderole': true
+          'Jhoechtl.Digitalista:NewsList': true
+          'Jhoechtl.Digitalista:YouTube': true
+  properties:
+    layout:
+      type: string
+      defaultValue: tags
+
+'Jhoechtl.Digitalista:Tag':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': true
+  constraints:
+    nodeTypes:
+      '*': false
+  ui:
+    label: i18n
+    icon: icon-tag
+    group: news
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'TYPO3.Neos.NodeTypes:Headline': true
+          'TYPO3.Neos.NodeTypes:Text': true
+          'TYPO3.Neos.NodeTypes:Image': true
+          'TYPO3.Neos.NodeTypes:TextWithImage': true
+          'TYPO3.Neos.NodeTypes:Html': true
+          'TYPO3.Neos.NodeTypes:TwoColumn': true
+          'Jhoechtl.Digitalista:TileTwoColumn': false
+          'TYPO3.Neos.NodeTypes:ThreeColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': false
+          'TYPO3.Neos.NodeTypes:FourColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': false
+          'Jhoechtl.Digitalista:Banderole': true
+          'Jhoechtl.Digitalista:NewsList': true
+          'Jhoechtl.Digitalista:YouTube': true
+  properties:
+    layout:
+      type: string
+      defaultValue: tag
+
+'Jhoechtl.Digitalista:Author':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': true
+  constraints:
+    nodeTypes:
+      '*': false
+  ui:
+    label: i18n
+    icon: icon-user
+    group: news
+    inspector:
+      groups:
+        document:
+          label: i18n
+        author:
+          label: i18n
+          position: 15
+  childNodes:
+    main:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'TYPO3.Neos.NodeTypes:Headline': true
+          'TYPO3.Neos.NodeTypes:Text': true
+          'TYPO3.Neos.NodeTypes:Image': true
+          'TYPO3.Neos.NodeTypes:TextWithImage': true
+          'TYPO3.Neos.NodeTypes:Html': true
+          'TYPO3.Neos.NodeTypes:TwoColumn': true
+          'Jhoechtl.Digitalista:TileTwoColumn': false
+          'TYPO3.Neos.NodeTypes:ThreeColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': false
+          'TYPO3.Neos.NodeTypes:FourColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': false
+          'Jhoechtl.Digitalista:Banderole': true
+          'Jhoechtl.Digitalista:NewsList': true
+          'Jhoechtl.Digitalista:YouTube': true
+  properties:
+    layout:
+      type: string
+      defaultValue: author
+    name:
+      type: string
+      ui:
+        label: i18n
+        inspector:
+          group: author
+    email:
+      type: string
+      ui:
+        label: i18n
+        inlineEditable: true
+        aloha:
+          placeholder: 'Author email'
+          format: {  }
+          table: {  }
+          list: {  }
+          link: {  }
+          alignment: {  }
+        inspector:
+          group: author
+
+'Jhoechtl.Digitalista:NewsList':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    label: i18n
+    icon: icon-list
+    inlineEditable: true
+    group: news
+  constraints:
+    nodeTypes:
+      '*': false
+
+'Jhoechtl.Digitalista:GalleryItem':
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos.NodeTypes:ImageMixin': true
+  ui:
+    label: i18n
+    icon: icon-picture
+    inlineEditable: true
+  properties:
+    copyright:
+      type: string
+      ui:
+        label: i18n
+        inspector:
+          group: image
+
+'Jhoechtl.Digitalista:NewsGallery':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': true
+  ui:
+    label: i18n
+    icon: icon-picture
+    group: news
+  properties:
+    layout:
+      type: string
+      defaultValue: galleryPage

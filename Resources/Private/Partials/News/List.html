@@ -1,0 +1,29 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+{namespace typo3cr=TYPO3\TYPO3CR\ViewHelpers}
+<f:if condition="{newsList}">
+	<f:then>
+		<ul class="news-list list-unstyled">
+			<typo3cr:widget.paginate nodes="{newsList}" widgetId="newsList" as="paginatedNews" configuration="{itemsPerPage: maxNumberOfItems}">
+				<f:for each="{paginatedNews}" as="news">
+					<li class="news-item">
+						<f:if condition="{news.properties.image}">
+							<figure>
+								<media:image class="pull-left" image="{news.properties.image}" alt="{news.properties.alternativeText}" maximumWidth="180" maximumHeight="130" />
+							</figure>
+						</f:if>
+						<div class="caption">
+							<h3>{news.properties.subTitle -> f:format.raw()}</h3>
+							<h2><neos:link.node node="{news}">{news.properties.newsTitle -> f:format.raw()}</neos:link.node></h2>
+							<p>{news.properties.teaser -> f:format.raw()} <a class="read-more" href="{neos:uri.node(node:news)}">mehr ...</a></p>
+						</div>
+					</li>
+				</f:for>
+			</typo3cr:widget.paginate>
+		</ul>
+	</f:then>
+	<f:else>
+		<p>No news in list</p>
+	</f:else>
+</f:if>

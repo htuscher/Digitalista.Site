@@ -1,0 +1,14 @@
+<f:if condition="{node.context.workspace.name} != 'live'">
+	<f:then>
+		<div class="panel panel-default">
+			<div class="panel-body bg-info">
+				HTML not rendered in backend
+			</div>
+		</div>
+	</f:then>
+	<f:else>
+		<div {attributes -> f:format.raw()}>
+			{source -> f:format.raw()}
+		</div>
+	</f:else>
+</f:if>

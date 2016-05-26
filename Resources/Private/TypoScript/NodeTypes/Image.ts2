@@ -1,0 +1,3 @@
+prototype(TYPO3.Neos.NodeTypes:Image) {
+	imageClassName = ${q(node).property('alignment') ? ('text-' + q(node).property('alignment')) : ''}
+}

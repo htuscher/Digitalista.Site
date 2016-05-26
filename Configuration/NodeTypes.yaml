@@ -1,0 +1,45 @@
+# If you need more than just the "main" content area you can uncomment the snippet below. It will add a "sidebar" area
+# to your pages. You can add as many areas as you like, still only those that are rendered in your TypoScript and
+# Template are visible on your page.
+
+'TYPO3.Neos:Node':
+  search:
+    elasticSearchMapping:
+      _all:
+        index_analyzer: german
+        search_analyzer: german
+
+'TYPO3.Neos.NodeTypes:Page':
+  childNodes:
+    rightAds:
+      type: 'TYPO3.Neos:ContentCollection'
+    sidebar:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'TYPO3.Neos.NodeTypes:Text': true
+          'TYPO3.Neos.NodeTypes:Image': true
+          'Jhoechtl.Digitalista:SidebarPanel': true
+  properties:
+    copyright:
+      type: string
+      defaultValue: 'Digitalista 2015'
+      ui:
+        inlineEditable: true
+        inspector:
+          group: null
+        aloha:
+          format:
+            b: true
+            i: true
+            u: true
+          table: {  }
+          link: {  }
+          list: {  }
+'Jhoechtl.Digitalista:Folder':
+  superTypes:
+    'TYPO3.Neos:Document': true
+  ui:
+    icon: icon-folder-open
+    label: Folder

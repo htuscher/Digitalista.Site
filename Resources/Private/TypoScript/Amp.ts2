@@ -1,0 +1,93 @@
+root.ampSwitch {
+    condition = ${request.arguments.amp}
+    renderPath = '/amp'
+}
+// add the request argument to caching
+root.@cache.entryIdentifier.amp = ${request.arguments.amp}
+
+amp = Page {
+    htmlTag.attributes {
+        amp = ''
+        lang = 'de'
+    }
+    headerComment >
+
+    head {
+        viewportTag = TYPO3.TypoScript:Tag {
+            @position = 'after titleTag'
+            tagName = 'meta'
+            attributes {
+                name = 'viewport'
+                content = 'width=device-width,minimum-scale=1,initial-scale=1'
+            }
+        }
+        characterSetMetaTag.attributes.charset = 'utf-8'
+        stylesheets >
+        javascripts >
+
+        ampCustomStyle = TYPO3.TypoScript:Tag {
+            tagName = 'style'
+            attributes {
+                amp-custom = ''
+            }
+            content = TYPO3.TypoScript:Template {
+                templatePath = 'resource://Jhoechtl.Digitalista/Public/Styles/amp.css'
+            }
+        }
+
+        ampStyle = TYPO3.TypoScript:Tag {
+            tagName = 'style'
+            content = 'body {opacity: 0}'
+        }
+        ampNoScriptStyle = TYPO3.TypoScript:Tag {
+            tagName = 'noscript'
+            content = '<style>body {opacity: 1}</style>'
+        }
+        ampScript = TYPO3.TypoScript:Tag {
+            tagName = 'script'
+            attributes {
+                async = ''
+                src = 'https://cdn.ampproject.org/v0.js'
+            }
+        }
+    }
+
+    body {
+        templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Amp.html'
+        partialRootPath = 'resource://Jhoechtl.Digitalista/Private/Partials'
+        sectionName = 'body'
+        javascripts >
+        parts {
+            mainMenu = Menu {
+                templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/MainMenu.html'
+                maximumLevels = 1
+                entryLevel = 1
+            }
+
+            footerMenu = Menu {
+                entryLevel = 2
+                templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/FooterMenu.html'
+                maximumLevels = 1
+                startingPoint = ${q(site).children('node-552a777951004').get(0)}
+            }
+        }
+        // These are your content areas, you can define as many as you want, just name them and the nodePath.
+        content {
+            // The default content section
+            main = PrimaryContent {
+                nodePath = 'main'
+                prototype(TYPO3.Neos.NodeTypes:Image) {
+                    maximumWidth = 550
+                }
+            }
+        }
+
+        copyright = ${q(site).property('copyright')}
+    }
+    lastVisitedNodeScript >
+
+
+    prototype(TYPO3.Neos.NodeTypes:Image) {
+        templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/NodeTypes/Amp/Image.html'
+    }
+}

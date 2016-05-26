@@ -1,0 +1,6 @@
+prototype(Site:SidebarPanel) {
+	panelBody = ContentCollection {
+		nodePath = 'panelBody'
+		iterationName = 'panelBodyIteration'
+	}
+}

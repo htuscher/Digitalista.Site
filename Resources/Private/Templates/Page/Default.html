@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+<head>
+	<f:section name="stylesheets">
+		<link rel="shortcut icon" href="{f:uri.resource(path:'Favicons/favicon.ico', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" sizes="16x16 32x32 64x64" href="{f:uri.resource(path:'Favicons/favicon.ico', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" type="image/png" sizes="196x196" href="{f:uri.resource(path:'Favicons/favicon-192.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" type="image/png" sizes="160x160" href="{f:uri.resource(path:'Favicons/favicon-160.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" type="image/png" sizes="96x96" href="{f:uri.resource(path:'Favicons/favicon-96.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" type="image/png" sizes="64x64" href="{f:uri.resource(path:'Favicons/favicon-64.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{f:uri.resource(path:'Favicons/favicon-32.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{f:uri.resource(path:'Favicons/favicon-16.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="apple-touch-icon" href="{f:uri.resource(path:'Favicons/favicon-57.png', package:'Jhoechtl.Digitalista')}">
+		<link rel="apple-touch-icon" sizes="60x60" href="{f:uri.resource(path:'Favicons/favicon-60.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="72x72" href="{f:uri.resource(path:'Favicons/favicon-72.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="76x76" href="{f:uri.resource(path:'Favicons/favicon-76.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="114x114" href="{f:uri.resource(path:'Favicons/favicon-114.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="120x120" href="{f:uri.resource(path:'Favicons/favicon-120.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="144x144" href="{f:uri.resource(path:'Favicons/favicon-144.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="152x152" href="{f:uri.resource(path:'Favicons/favicon-152.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<link rel="apple-touch-icon" sizes="180x180" href="{f:uri.resource(path:'Favicons/favicon-180.png', package:'Jhoechtl.Digitalista')}?bust=1440138378">
+		<meta name="msapplication-TileColor" content="#FFFFFF">
+		<meta name="msapplication-TileImage" content="{f:uri.resource(path:'Favicons/favicon-144.png', package:'Jhoechtl.Digitalista')}">
+		<meta name="msapplication-config" content="{f:uri.resource(path:'Favicons/browserconfig.xml', package:'Jhoechtl.Digitalista')}">
+
+		<f:comment>
+			<!-- build:css(.tmp) Styles/main.css -->
+			<link rel="stylesheet" href="Styles/main.css">
+			<!-- endbuild -->
+			<!-- build:css(.tmp) Styles/backend.css -->
+			<link rel="stylesheet" href="Styles/backend.css">
+			<!-- endbuild -->
+			<!-- build:css(.tmp) Styles/amp.css -->
+			<link rel="stylesheet" href="Styles/amp.css">
+			<!-- endbuild -->
+		</f:comment>
+		<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/main.css', package: 'Jhoechtl.Digitalista')}?bust=1454868497" media="all" />
+		<f:if condition="{node.context.workspace.name} != 'live'">
+			<link rel="stylesheet" href="{f:uri.resource(path: 'Styles/backend.css', package: 'Jhoechtl.Digitalista')}?bust=1439729799" media="all" />
+		</f:if>
+	</f:section>
+	<f:section name="headScripts">
+		<f:comment>
+		<!-- build:js JavaScript/vendor/modernizr.js -->
+		<script src="../../Libraries/modernizr/modernizr.js"></script>
+		<!-- endbuild -->
+		</f:comment>
+		<script src="{f:uri.resource(path: 'JavaScript/vendor/modernizr.js', package: 'Jhoechtl.Digitalista')}"></script>
+	</f:section>
+	<f:section name="bodyTopScripts">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.4&appId=395237300636316";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	</f:section>
+</head>
+<body>
+<f:section name="googleTagManager">
+	<!-- Google Tag Manager -->
+	<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MDTJ69"
+					  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-MDTJ69');</script>
+	<!-- End Google Tag Manager -->
+</f:section>
+<f:section name="body">
+	<!--[if lt IE 10]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-13 content-container">
+				<header>
+					<f:render partial="Header/Logo" arguments="{_all}" />
+
+					<f:render partial="Header/Navigation" arguments="{_all}" />
+				</header>
+				<main>
+					<section class="row main-content">
+						<div class="col-md-10">
+							{content.main -> f:format.raw()}
+						</div>
+						<aside class="col-md-6 hidden-xs hidden-sm">
+							{content.sidebar -> f:format.raw()}
+						</aside>
+					</section>
+				</main>
+				<footer>
+					<nav class="row">
+						<div class="col-md-16">
+							{parts.footerMenu -> f:format.raw()}
+
+							<f:render partial="Footer/SocialIcons" />
+						</div>
+					</nav>
+					<div class="row copyright">
+						<neos:contentElement.wrap node="{node}">
+							<div class="col-md-12 text-center">
+								<neos:contentElement.editable property="copyright" tag="div" />
+							</div>
+						</neos:contentElement.wrap>
+					</div>
+					<a href="#" class="anchor" title="nach oben"><span class="fa fa-chevron-circle-up"></span></a>
+				</footer>
+			</div>
+			<div class="col-md-3 hidden-sm hidden-xs ads-column">
+				{content.rightAds -> f:format.raw()}
+			</div>
+		</div>
+	</div>
+</f:section>
+
+
+<f:section name="bodyScripts">
+
+	<f:comment>
+		<!-- This is used by usemin to generate a concatenated js which is included beyond
+		<!-- build:js JavaScript/main.js -->
+		<!-- bower:js -->
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/jquery/dist/jquery.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
+		<script src="../../../../../../Application/Jhoechtl.Digitalista.Design/Resources/Private/Libraries/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+		<!-- endbower -->
+		<script src="../../Libraries/jquery-easing/jquery.easing.js"></script>
+		<script src="../../Libraries/jquery-ui/ui/core.js"></script>
+		<script src="../../Libraries/jquery-ui/ui/effect.js"></script>
+		<script src="../../Libraries/jquery-ui/ui/effect-slide.js"></script>
+		<script src="../../JavaScript/main.js"></script>
+		<script src="../../JavaScript/ajaxForm.js"></script>
+		<script src="../../JavaScript/searchFlyout.js"></script>
+		<!-- endbuild -->
+	</f:comment>
+
+	<script async src="{f:uri.resource(path: 'JavaScript/main.js', package: 'Jhoechtl.Digitalista')}?bust=1451493975"></script>
+	<f:if condition="{node.context.workspace.name} == 'live'">
+		<script type="text/javascript">
+			if (!window.PLISTA || !PLISTA.publickey) {
+				window.PLISTA = {publickey: '9bace4ada6537b24aadc3d9b'};
+				(function(){
+							var n='script',d=document,s=d.createElement(n),s0=d.getElementsByTagName(n)[0];
+							s.async='async';
+							s.type='text/javascript';
+							s.src=(d.location.protocol==='https:'?'https:':'http:')+'//static.plista.com/async.js';
+							s0.parentNode.insertBefore(s,s0)}()
+				);
+			}
+		</script>
+	</f:if>
+</f:section>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+<f:if condition="{image}">
+	<f:then>
+		<f:if condition="{link}">
+			<f:then>
+				<a href="{link}">
+					<amp-img width="{image.width}" height="{image.height}" src="{media:uri.image(asset:image, maximumWidth:maximumWidth, maximumHeight: maximumHeight, allowCropping:allowCropping, allowUpScaling:allowUpScaling)}" alt="{alternativeText}" title="{title}" ></amp-img>
+				</a>
+			</f:then>
+			<f:else>
+				<amp-img width="{image.width}" height="{image.height}" src="{media:uri.image(asset:image, maximumWidth:maximumWidth, maximumHeight: maximumHeight, allowCropping:allowCropping, allowUpScaling:allowUpScaling)}" alt="{alternativeText}" title="{title}" ></amp-img>
+			</f:else>
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{neos:rendering.inEditMode()}">
+			<img src="{f:uri.resource(package: 'TYPO3.Neos', path: 'Images/dummy-image.svg')}" title="Dummy image" alt="Dummy image" class="neos-handle" />
+		</f:if>
+	</f:else>
+</f:if>
+<f:if condition="{hasCaption}">
+	<figcaption>
+		{neos:contentElement.editable(property: 'caption', node: node)}
+	</figcaption>
+</f:if>

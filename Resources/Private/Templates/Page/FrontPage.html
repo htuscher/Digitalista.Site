@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+<head>
+</head>
+<body>
+<f:section name="body">
+	<!--[if lt IE 10]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-13 content-container">
+				<header>
+					<f:render partial="Header/Logo" arguments="{_all}" />
+
+					<f:render partial="Header/Navigation" arguments="{_all}" />
+				</header>
+				<main>
+
+					<section class="top-topics">
+						<neos:contentElement.wrap node="{node}">
+							<div class="top-topics-title">
+								{neos:contentElement.editable(property: 'topTopicsBanderole', tag: 'h1', class: 'banderole')}
+							</div>
+						</neos:contentElement.wrap>
+						<div class="row" id="top-topics-grid">
+							<div class="col-md-16">
+							{content.topTopics -> f:format.raw()}
+							</div>
+						</div>
+					</section>
+
+					<section class="row main-content">
+						<div class="col-md-10">
+							<div class="news-bar-gray">
+								<neos:contentElement.wrap node="{node}">
+									<div class="bar-title">
+										{neos:contentElement.editable(property: 'newsBarBanderole', tag: 'h1', class: 'banderole')}
+									</div>
+								</neos:contentElement.wrap>
+								<div class="pull-right">
+									<a id="news-grid-toggle" href="#news-grid" data-toggle="tab" class="fa-stack fa-lg active">
+										<i class="fa fa-square fa-stack-2x"></i>
+										<i class="fa fa-th-list fa-inverse fa-stack-1x"></i>
+									</a>
+									<a id="news-list-toggle" href="#news-list" data-toggle="tab" class="fa-stack fa-lg">
+										<i class="fa fa-square fa-stack-2x"></i>
+										<i class="fa fa-align-justify fa-inverse fa-stack-1x"></i>
+									</a>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+
+							<div class="tab-content">
+								<div id="news-grid" class="tab-pane active">
+									<f:if condition="{content.latestNews}">
+										<f:render partial="News/List" arguments="{newsList: content.latestNews, maxNumberOfItems: content.latestNewsLimit}" />
+									</f:if>
+								</div>
+								<div id="news-list" class="tab-pane">
+									<f:if condition="{content.latestNews}">
+										<f:render partial="News/DayList" arguments="{newsList: content.latestNews}" />
+									</f:if>
+								</div>
+							</div>
+
+							{content.main -> f:format.raw()}
+						</div>
+						<aside class="col-md-6 hidden-xs hidden-sm">
+							{content.sidebar -> f:format.raw()}
+						</aside>
+					</section>
+				</main>
+				<footer>
+					<nav class="row">
+						<div class="col-md-16">
+							{parts.footerMenu -> f:format.raw()}
+
+							<f:render partial="Footer/SocialIcons" />
+						</div>
+					</nav>
+					<div class="row copyright">
+						<neos:contentElement.wrap node="{node}">
+							<div class="col-md-12 text-center">
+								<neos:contentElement.editable property="copyright" tag="span" />
+							</div>
+						</neos:contentElement.wrap>
+					</div>
+					<a href="#" class="anchor" title="nach oben"><span class="fa fa-chevron-circle-up"></span></a>
+				</footer>
+			</div>
+			<div class="col-md-3 hidden-sm hidden-xs ads-column">
+				{content.rightAds -> f:format.raw()}
+			</div>
+		</div>
+	</div>
+</f:section>
+</body>
+</html>

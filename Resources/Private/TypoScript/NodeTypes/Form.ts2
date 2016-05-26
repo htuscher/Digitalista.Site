@@ -1,0 +1,3 @@
+prototype(TYPO3.Neos:Page) {
+	body.javascripts.ajaxForms >
+}

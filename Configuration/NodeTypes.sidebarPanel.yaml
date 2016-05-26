@@ -1,0 +1,31 @@
+
+'Jhoechtl.Digitalista:SidebarPanel':
+  superTypes:
+    'TYPO3.Neos:Content': true
+  ui:
+    icon: icon-list-alt
+    label: 'Sidebar Panel'
+    inlineEditable: true
+  childNodes:
+    panelBody:
+      type: 'TYPO3.Neos:ContentCollection'
+  properties:
+    panelTitle:
+      type: string
+      defaultValue: 'The <em>Panel</em>'
+      ui:
+        aloha:
+          format:
+            - em
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }
+    showTitle:
+      type: boolean
+      defaultValue: true
+      reloadIfChanged: true
+      ui:
+        label: Show title
+        inspector:
+          group: type

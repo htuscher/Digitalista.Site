@@ -1,0 +1,64 @@
+'TYPO3.Neos.NodeTypes:TwoColumn':
+  properties:
+    'layout':
+      defaultValue: '8-8'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '50-50': ~
+              '75-25': ~
+              '25-75': ~
+              '66-33': ~
+              '33-66': ~
+              '8-8':
+                label: '50% / 50%'
+              '10-6':
+                label: '62,5% / 37,5%'
+              '6-10':
+                label: '37,5% / 62,5%'
+              '12-4':
+                label: '75% / 25%'
+              '4-12':
+                label: '25% / 75%'
+
+##
+# Adjust the "ThreeColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'TYPO3.Neos.NodeTypes:ThreeColumn':
+  properties:
+    'layout':
+      defaultValue: '5-6-5'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '33-33-33': ~
+              '50-25-25': ~
+              '25-50-25': ~
+              '25-25-50': ~
+              '5-6-5':
+                label: '31,25% / 37,5% / 31,25%'
+              '8-4-4':
+                label: '50% / 25% / 33%'
+              '4-8-4':
+                label: '25% / 50% / 25%'
+              '4-4-8':
+                label: '25% / 25% / 50%'
+
+##
+# Adjust the "FourColumn" node type:
+# Disable some of the layout options, override labels and set the default layout
+#
+'TYPO3.Neos.NodeTypes:FourColumn':
+  properties:
+    'layout':
+      defaultValue: '4-4-4-4'
+      ui:
+        inspector:
+          editorOptions:
+            values:
+              '25-25-25-25': ~
+              '4-4-4-4':
+                label: '25% / 25% / 25% / 25%'

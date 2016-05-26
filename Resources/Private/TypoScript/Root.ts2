@@ -1,0 +1,130 @@
+/**
+ * Root TypoScript template for the Digitalista site
+ */
+namespace: Site=Jhoechtl.Digitalista
+
+include: Components/*
+
+/**
+ *	Basic page configuration
+ */
+prototype(TYPO3.Neos:Page) {
+	lastVisitedNodeScript.attributes.src >
+	lastVisitedNodeScript.content = 'try {sessionStorage.setItem(\'TYPO3.Neos.lastVisitedNode\', document.querySelector(\'script[data-neos-node]\').getAttribute(\'data-neos-node\'));} catch(e) {}'
+}
+page = Page {
+	head {
+		viewportTag = TYPO3.TypoScript:Tag {
+			@position = 'start 5'
+			tagName = 'meta'
+			attributes {
+				name = 'viewport'
+				content = 'width=device-width, initial-scale=1.0'
+			}
+		}
+		stylesheets.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+			sectionName = 'stylesheets'
+			node = ${node}
+		}
+
+		javascripts.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+			sectionName = 'headScripts'
+		}
+	}
+
+	# Moved to news detail page until it's really necessary on all pages
+#	bodyTopScripts = TYPO3.TypoScript:Template {
+#		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+#		sectionName = 'bodyTopScripts'
+#		@position = 'before body'
+#	}
+	googleTagManager = TYPO3.TypoScript:Template {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+		sectionName = 'googleTagManager'
+		@position = 'before body'
+	}
+
+	body {
+		# TODO: adapt node ID according to live environment
+		searchPage = ${q(site).find('#fe2d31eb-bc3a-f2b8-7794-2794a537bba3').get(0)}
+
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+		partialRootPath = 'resource://Jhoechtl.Digitalista/Private/Partials'
+		sectionName = 'body'
+		parts {
+			mainMenu = Menu {
+				templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/MainMenu.html'
+				maximumLevels = 1
+				entryLevel = 1
+			}
+
+			secondMenu = Menu {
+				templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/SecondMenu.html'
+				entryLevel = 2
+				maximumLevels = 1
+				startingPoint = ${q(site).children('node-559a59f0e9761').get(0)}
+			}
+
+			footerMenu = Menu {
+				entryLevel = 2
+				templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/TypoScriptObjects/FooterMenu.html'
+				maximumLevels = 1
+				startingPoint = ${q(site).children('node-552a777951004').get(0)}
+			}
+			currentDate = ${Date.now()}
+		}
+		// These are your content areas, you can define as many as you want, just name them and the nodePath.
+		content {
+			// The default content section
+			main = PrimaryContent {
+				nodePath = 'main'
+				prototype(TYPO3.Neos.NodeTypes:Image) {
+					maximumWidth = 550
+				}
+			}
+			sidebar = ContentCollection {
+				nodePath = 'sidebar'
+				@override.node = ${Digitalista.Node.nonEmptyPathCollection(node, this.nodePath)}
+				@cache.entryTags.1 = 'Everything'
+			}
+			rightAds = ContentCollection {
+				nodePath = 'rightAds'
+				@override.node = ${Digitalista.Node.nonEmptyPathCollection(node, this.nodePath)}
+				@cache.entryTags.1 = 'Everything'
+			}
+		}
+
+		copyright = ${q(site).property('copyright')}
+
+		javascripts.site = TYPO3.TypoScript:Template {
+			templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+			sectionName = 'bodyScripts'
+			node = ${node}
+		}
+	}
+}
+
+frontPage < page
+frontPage {
+	bodyTopScripts = TYPO3.TypoScript:Template {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/Default.html'
+		sectionName = 'bodyTopScripts'
+		@position = 'before body'
+	}
+	body {
+		templatePath = 'resource://Jhoechtl.Digitalista/Private/Templates/Page/FrontPage.html'
+		topTopicsBanderole = ${q(node).property('topTopicsBanderole')}
+		newsBarBanderole = ${q(node).property('newsBarBanderole')}
+		content.topTopics = ContentCollection {
+			nodePath = 'topTopics'
+		}
+		content.latestNews = ${q(site).find('[instanceof Jhoechtl.Digitalista:News]').sort('creationDate', 'DESC').slice(0,20).get()}
+		content.latestNewsLimit = 20
+	}
+}
+
+include: NodeTypes/*
+
+include: Amp.ts2

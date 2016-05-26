@@ -1,0 +1,25 @@
+{xmlProlog -> f:format.raw()}{namespace neos=TYPO3\Neos\ViewHelpers}
+<urlset{attributes -> f:format.raw()}>
+<f:render section="itemsList" arguments="{items: items}"/>
+		</urlset>
+
+<f:section name="itemsList">
+<f:for each="{items}" as="item">
+	<f:if condition="{item.node.properties.sitemapHide}">
+		<f:else>
+			<url>
+				<loc><neos:uri.node node="{item.node}" format="html" absolute="TRUE"></neos:uri.node></loc>
+				<f:if condition="{item.node.properties.sitemapChangeFrequency}">
+					<changefreq>{item.node.properties.sitemapChangeFrequency}</changefreq>
+				</f:if>
+				<f:if condition="{item.node.properties.sitemapPriority}">
+					<priority>{item.node.properties.sitemapPriority}</priority>
+				</f:if>
+			</url>
+		</f:else>
+	</f:if>
+	<f:if condition="{item.subItems}">
+		<f:render section="itemsList" arguments="{items: item.subItems}"/>
+	</f:if>
+</f:for>
+</f:section>

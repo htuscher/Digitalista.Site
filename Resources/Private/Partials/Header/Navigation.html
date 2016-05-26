@@ -1,0 +1,45 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+
+<div class="nav-toggle visible-xs visible-sm">
+	<a class="nav-button" data-toggle="collapse" href="#nav-small-devices">
+		Menü
+		<span class="nav-icon"></span>
+	</a>
+</div>
+
+<div class="row hidden-xs hidden-sm">
+	<div class="col-md-1">
+		<div class="header-clock">
+			<p class="day">{parts.currentDate -> f:format.date(format:'d.')}</p>
+			<p class="month">{parts.currentDate -> f:format.date(forceLocale:'de_DE',cldrFormat:'MMM. yy')}</p>
+			<p class="time">{parts.currentDate -> f:format.date(format:'H:i')}</p>
+		</div>
+	</div>
+	<div class="col-md-15 nav-col">
+		<form class="search-form" action="{neos:uri.node(node:searchPage)}">
+			<input id="searchterm" class="form-control" type="text" name="search" placeholder="Suche nach Thema" autocomplete="off" />
+			<i class="fa fa-search"></i>
+		</form>
+
+		{parts.mainMenu -> f:format.raw()}
+		{parts.secondMenu -> f:format.raw()}
+		<div class="gray-bar"></div>
+	</div>
+</div>
+<div id="flyout-container" class="row"></div>
+
+<div class="row visible-xs visible-sm">
+	<div id="nav-small-devices" class="col-md-16 nav-col navbar-collapse collapse">
+		{parts.mainMenu -> f:format.raw()}
+		<form class="search-form" action="{neos:uri.node(node:searchPage)}">
+			<div class="input-group">
+				<input class="form-control input-lg" type="text" name="search" placeholder="Suche nach Thema" autocomplete="off" />
+				<span class="input-group-btn">
+					<button class="btn btn-primary btn-lg" type="submit">
+						<i class="fa fa-search fa-lg"></i>
+					</button>
+				</span>
+			</div>
+		</form>
+	</div>
+</div>

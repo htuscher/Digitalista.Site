@@ -1,0 +1,18 @@
+##
+# "PageView" element, extending "Plugin"
+#
+prototype(Jhoechtl.Digitalista:PageViews) < prototype(TYPO3.Neos:Plugin) {
+	package = 'Jhoechtl.Digitalista'
+	controller = 'PageView'
+	action = 'views'
+	@cache {
+		mode = 'cached'
+		maximumLifetime = 1800
+		entryIdentifier {
+			pluginPageViews = 'pluginPageViews'
+			days = ${q(node).property('days')}
+			numberOfItems = ${q(node).property('numberOfItems')}
+			documentNode = ${q(documentNode).get(0)}
+		}
+	}
+}

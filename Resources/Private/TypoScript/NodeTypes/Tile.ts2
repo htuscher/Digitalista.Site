@@ -1,0 +1,25 @@
+prototype(Site:Tile) < prototype(TYPO3.Neos.NodeTypes:Image) {
+	maximumHeight = ${q(node).property('heightMultiplier')*182}
+	allowCropping = TRUE
+	backgroundImageUri = TYPO3.Neos:ImageUri {
+		asset = ${q(node).property('image')}
+		maximumHeight = ${q(node).property('heightMultiplier')*182}
+		@if.image = ${q(node).property('image')}
+	}
+}
+prototype(Jhoechtl.Digitalista:TileTwoColumn) >
+prototype(Jhoechtl.Digitalista:TileTwoColumn) < prototype(TYPO3.Neos.NodeTypes:TwoColumn) {
+	columns.itemRenderer = Jhoechtl.Digitalista:TileMultiColumnItem
+}
+prototype(Jhoechtl.Digitalista:TileThreeColumn) >
+prototype(Jhoechtl.Digitalista:TileThreeColumn) < prototype(TYPO3.Neos.NodeTypes:ThreeColumn) {
+	columns.itemRenderer = Jhoechtl.Digitalista:TileMultiColumnItem
+}
+prototype(Jhoechtl.Digitalista:TileFourColumn) >
+prototype(Jhoechtl.Digitalista:TileFourColumn) < prototype(TYPO3.Neos.NodeTypes:FourColumn) {
+	columns.itemRenderer = Jhoechtl.Digitalista:TileMultiColumnItem
+}
+
+prototype(Jhoechtl.Digitalista:TileMultiColumnItem) < prototype(TYPO3.Neos.NodeTypes:MultiColumnItem) {
+	attributes.class = ${'col-md-' + String.split(q(node).parent().property('layout'), '-')[multiColumnIteration.index] + ' col-xs-8'}
+}

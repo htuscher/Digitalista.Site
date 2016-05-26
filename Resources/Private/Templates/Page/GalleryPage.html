@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<html>
+<head>
+</head>
+<body>
+<f:section name="body">
+	<!--[if lt IE 10]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-13 content-container">
+				<header>
+					<f:render partial="Header/Logo" arguments="{_all}" />
+
+					<f:render partial="Header/Navigation" arguments="{_all}" />
+				</header>
+				<main>
+					<section class="row main-content gallery">
+						<div class="col-md-16">
+							<div class="back-to-article">
+								<a href="{neos:uri.node(node:parentArticle, section:'gallery')}"><i class="fa fa-angle-left"></i> Zurück zum Artikel</a>
+							</div>
+
+							<div id="juicebox-container"></div>
+						</div>
+					</section>
+				</main>
+				<footer>
+					<nav class="row">
+						<div class="col-md-16">
+							{parts.footerMenu -> f:format.raw()}
+
+							<f:render partial="Footer/SocialIcons" />
+						</div>
+					</nav>
+					<div class="row copyright">
+						<neos:contentElement.wrap node="{node}">
+							<div class="col-md-12 text-center">
+								<neos:contentElement.editable property="copyright" tag="span" />
+							</div>
+						</neos:contentElement.wrap>
+					</div>
+				</footer>
+			</div>
+			<div class="col-md-3 hidden-sm hidden-xs ads-column">
+				{content.rightAds -> f:format.raw()}
+			</div>
+		</div>
+	</div>
+</f:section>
+<f:section name="juicebox">
+	<script src="{f:uri.resource(path: 'JavaScript/jbcore/juicebox.js', package: 'Jhoechtl.Digitalista')}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function(){
+			var jb = new juicebox({
+				containerid:'juicebox-container',
+				configUrl: './config.xml',
+				galleryHeight: '500px',
+				imageScaleMode : 'SCALE',
+				backgroundColor: "#000000",
+				showImageOverlay: 'ALWAYS',
+				screenMode: 'AUTO',
+				buttonBarPosition: 'OVERLAY_IMAGE',
+				thumbFrameColor:"rgba(1, 125, 165, 1)",
+				showOpenButton: "false",
+				galleryTitlePosition: "NONE",
+				showThumbsOnLoad: "false",
+				imageTransitionType: "SLIDE",
+				imageTransitionTime: 0.2,
+				galleryTitle: "Interview",
+				splashButtonText: 'Bilder anzeigen',
+				languagelist:"Zeige Miniaturen|Verstecke Miniaturen|Vollbild|Schließen|Bild in neuem Fenster öffnen|Bilder|Nächstes Bild|Vorheriges Bild|Spiele Sound|Pause Sound|Zeige Details|Verstecke Details|Automatisch abspielen|Abspielen stop|AutoPlay AN|AutoPlay AUS|Zurück|Bild kaufen|Auf Facebook teilen|Auf Twitter teilen|Auf Google+ teilen|Auf Pinterest teilen|Auf Tumblr teilen|von"
+
+			});
+			// This fixes the tablet manipulation for ad display
+//									jb.onExpand = function(e){
+//										if(jQuery('body').hasClass('tablet')){
+//											jQuery('body').removeClass('tablet').addClass('tabletold');
+//										}else if(jQuery('body').hasClass('tabletold')){
+//											jQuery('body').removeClass('tabletold').addClass('tablet');
+//										}
+//									};
+		});
+	</script>
+</f:section>
+</body>
+</html>

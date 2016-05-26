@@ -1,0 +1,29 @@
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace d=Jhoechtl\Digitalista\ViewHelpers}
+
+<f:section name="main">
+<rss version="2.0">
+    <channel>
+        <title>{node.properties.title}</title>
+        <link><neos:uri.node node="{node}" absolute="true" /></link>
+        <description>{node.properties.title} von digitalista</description>
+        <language>de</language>
+        <copyright>{node.properties.copyright}</copyright>
+
+        {items -> f:format.raw()}
+
+    </channel>
+</rss>
+</f:section>
+
+<f:section name="item">
+<item>
+    <title>{newsItem.properties.title -> d:cdata()}</title>
+    <description>{main -> f:format.raw() -> d:cdata()}</description>
+    {atomLink -> f:format.raw()}
+    <link><neos:uri.node absolute="true" format="html" node="{newsItem}" /></link>
+    <guid isPermaLink="false">{newsItem.identifier}</guid>
+    <f:if condition="{newsItem.properties.creationDate}"><pubDate>{f:format.date(format:'r', date:newsItem.properties.creationDate)}</pubDate></f:if>
+</item>
+</f:section>

@@ -1,0 +1,8 @@
+Es wurde eine Kontaktanfrage über das Webseitenformular gesendet.
+
+<f:for each="{form.formState.formValues}" as="value" key="label">
+{label}:
+{value}
+
+
+</f:for>

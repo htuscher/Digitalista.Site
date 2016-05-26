@@ -1,0 +1,27 @@
+#                                                                        #
+# Security policy for the Jhoechtl.Digitalista package                   #
+#                                                                        #
+
+privilegeTargets:
+  TYPO3\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    Jhoechtl_Digitalista_PageViewAccess:
+        matcher: method(Jhoechtl\Digitalista\Controller\PageViewController->(views|shares)Action())
+#  'TYPO3\Neos\Security\Authorization\Privilege\NodeTreePrivilege':
+#      'Jhoechtl.Digitalista:AllNodes':
+#        matcher: 'isDescendantNodeOf("/")'
+#      'Jhoechtl.Digitalista:RestrictedNodeTree':
+#        matcher: '!isDescendantNodeOf("76e8b4ca-62ae-488f-83a9-97fd31f740ca")'
+roles:
+  'TYPO3.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: Jhoechtl_Digitalista_PageViewAccess
+        permission: GRANT
+#  'TYPO3.Neos:RestrictedEditor':
+#    privileges:
+#      -
+#        privilegeTarget: 'Jhoechtl.Digitalista:AllNodes'
+#        permission: GRANT
+#      -
+#        privilegeTarget: 'Jhoechtl.Digitalista:RestrictedNodeTree'
+#        permission: DENY

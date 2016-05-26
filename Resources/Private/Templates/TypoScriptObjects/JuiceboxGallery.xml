@@ -1,0 +1,13 @@
+{xmlProlog -> f:format.raw()}{namespace neos=TYPO3\Neos\ViewHelpers}{namespace media=TYPO3\Media\ViewHelpers}
+<juiceboxgallery{attributes -> f:format.raw()}>
+	<f:render section="itemsList" arguments="{items: galleryItems}"/>
+</juiceboxgallery>
+
+<f:section name="itemsList">
+	<f:for each="{items}" as="item">
+		<image imageURL="{media:uri.image(image:item.properties.image, allowCropping:0, allowUpScaling:0)}">
+			<title><![CDATA[<![CDATA[]]>{item.properties.title}<![CDATA[]]>]]></title>
+			<caption><f:if condition="{item.properties.copyright}"><![CDATA[<![CDATA[]]>Copyright: {item.properties.copyright}<![CDATA[]]>]]></f:if></caption>
+		</image>
+	</f:for>
+</f:section>

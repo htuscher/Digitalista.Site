@@ -1,0 +1,10 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+<ol>
+	<f:for each="{newsList}" as="newsWithCount">
+		<li>
+			<a href="{newsWithCount.uri}" data-count="{newsWithCount.viewCount}">
+				<span class="list-item-title">{newsWithCount.node.properties.subTitle -> f:format.raw()}:</span> {newsWithCount.node.properties.title -> f:format.raw()}
+			</a>
+		</li>
+	</f:for>
+</ol>

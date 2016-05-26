@@ -1,0 +1,18 @@
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+<section class="language-menu row text-center">
+
+    This article is also available in the following languages:
+    <ul class="list-inline">
+        <f:for each="{items}" as="item">
+            <f:if condition="{item.state} != 'current'">
+                <f:if condition="{item.node}">
+                    <li>
+                        <neos:link.node node="{item.node}"><span class="language-menu-full">{item.label}</span></neos:link.node>
+                    </li>
+                </f:if>
+            </f:if>
+        </f:for>
+    </ul>
+
+</section>

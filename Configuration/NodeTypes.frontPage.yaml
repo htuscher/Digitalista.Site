@@ -1,0 +1,45 @@
+
+'Jhoechtl.Digitalista:FrontPage':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:Page': true
+  ui:
+    label: Frontpage
+    icon: icon-globe
+  childNodes:
+    topTopics:
+      type: 'TYPO3.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+  properties:
+    layout:
+      type: string
+      defaultValue: frontPage
+    topTopicsBanderole:
+      type: string
+      defaultValue: 'Die <em>Topthemen</em>'
+      ui:
+        inlineEditable: true
+        aloha:
+          format:
+            - em
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }
+    newsBarBanderole:
+      type: string
+      defaultValue: 'Die <em>News</em>'
+      ui:
+        inlineEditable: true
+        aloha:
+          format:
+            - em
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }

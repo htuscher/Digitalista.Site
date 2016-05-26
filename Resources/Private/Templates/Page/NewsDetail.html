@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+{namespace neos=TYPO3\Neos\ViewHelpers}
+{namespace ts=TYPO3\TypoScript\ViewHelpers}
+{namespace media=TYPO3\Media\ViewHelpers}
+<html xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/Fluid/ViewHelpers"
+	  xmlns:neos="http://typo3.org/ns/TYPO3/Neos/ViewHelpers"
+	  xmlns:media="http://typo3.org/ns/TYPO3/Media/ViewHelpers"
+	  xmlns:ts="http://typo3.org/ns/TYPO3/TypoScript/ViewHelpers">
+<head>
+</head>
+<body>
+<f:section name="body">
+	<!--[if lt IE 10]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-13 content-container">
+				<header class="hidden-print">
+					<f:render partial="Header/Logo" arguments="{_all}" />
+					<f:render partial="Header/Navigation" arguments="{_all}" />
+				</header>
+				<main>
+					<section class="row news-navigation hidden-print">
+						<div class="col-xs-8 text-center news-nav-element news-prev">
+							<f:if condition="{prevNews}">
+								<a href="{neos:uri.node(node:prevNews)}"><span class="fa fa-angle-left"></span> <span class="hidden-xs news-nav-title">{prevNews.properties.newsTitle -> f:format.raw()}</span></a>
+							</f:if>
+						</div>
+						<div class="col-xs-8 text-center news-nav-element news-next">
+							<f:if condition="{nextNews}">
+								<a href="{neos:uri.node(node:nextNews)}"><span class="hidden-xs news-nav-title">{nextNews.properties.newsTitle -> f:format.raw()}</span> <span class="fa fa-angle-right"></span></a>
+							</f:if>
+						</div>
+					</section>
+					{languageMenu -> f:format.raw()}
+					<section class="row main-content news-detail">
+						<div class="col-md-10" itemscope itemtype="http://schema.org/Article">
+
+							<f:if condition="{node.context.workspace.name} != 'live'">
+								<div class="news-preview">
+									<p>Preview as in news list <em>(this is only visible in Neos backend)</em></p>
+									<f:render partial="News/List" arguments="{newsList: singleNewsList, maxNumberOfItems: 10}" />
+								</div>
+							</f:if>
+
+							<div class="news-title">
+								<neos:contentElement.wrap node="{node}">
+									<neos:contentElement.editable property="subTitle" tag="h2" additionalAttributes="{itemprop:'headline'}" />
+									<neos:contentElement.editable property="newsTitle" tag="h1" additionalAttributes="{itemprop:'alternativeHeadline'}" />
+								</neos:contentElement.wrap>
+								<f:if condition="{node.nodeData.properties.creationDate.date}">
+								<p class="news-meta">
+									<f:if condition="{node.properties.image}">
+										<meta itemprop="image" content="{media:uri.image(image:node.properties.image)}" alt="{node.properties.alternativeText}" >
+									</f:if>
+									<meta itemprop="url" content="{neos:uri.node(node:node, absolute: true)}">
+									<meta itemprop="datePublished" content="{f:format.date(format:'Y-m-d', date:creationDate)}T{f:format.date(format:'H:i', date:creationDate)}">
+									<f:translate source="NodeTypes/News" package="Jhoechtl.Digitalista">By</f:translate>
+										<span itemprop="author" itemscope itemtype="http://schema.org/Person">
+											<f:if condition="{author}">
+												<f:then>
+													<a href="{neos:uri.node(node:author)}" class="author-name" itemprop="name">{author.properties.name}</a>
+												</f:then>
+												<f:else>
+													<span class="author-name" itemprop="name">Georg Elser</span>
+												</f:else>
+											</f:if>
+										</span>
+									<f:translate id="creation_date" arguments="{'date': '{creationDate -> f:format.date(format:\'d.m.Y\')}', 'time': '{creationDate -> f:format.date(format:\'H:i\')}'}" source="NodeTypes/News" package="Jhoechtl.Digitalista" />
+										| <i class="fa fa-comment"></i> <span class="fb-comments-count" data-href="{neos:uri.node(node:node, absolute:1)}">{facebookShares}</span>
+								</p>
+								</f:if>
+							</div>
+
+							<div class="article-content" itemprop="articleBody">
+								{content.main -> f:format.raw()}
+							</div>
+
+							<f:if condition="{tags}">
+								<ul class="list-inline tags">
+								<f:for each="{tags}" as="tag" iteration="iterator">
+									<li><neos:link.node node="{tag}" additionalAttributes="{itemprop:'articleSection'}">{tag.properties.title}</neos:link.node></li>
+								</f:for>
+								</ul>
+							</f:if>
+
+							<f:if condition="{source}">
+								<ul class="list-inline source">
+									<li><f:translate source="NodeTypes/News" package="Jhoechtl.Digitalista">Source</f:translate></li>
+									<f:if condition="{sourceUrl}">
+										<f:then>
+											<li>
+												<a href="{sourceUrl}" target="_blank">
+													{source -> f:format.raw()}
+												</a>
+											</li>
+										</f:then>
+										<f:else>
+											<li class="inactive">{source -> f:format.raw()}</li>
+										</f:else>
+									</f:if>
+								</ul>
+							</f:if>
+
+							<hr />
+
+							<f:if condition="{node.context.workspace.name} != 'live'">
+								<f:then>
+									<f:if condition="{content.galleryItemsCount} > 0">
+										<f:if condition="{galleryNode}">
+											<f:else>
+												<p class="bg-warning" style="padding: 15px;">
+													Damit die Bildergalerie funktioniert, stellen Sie sicher, dass sich im
+													Seitenbaum unterhalb dieses News-Eintrags eine Gallery-Seite befindet.
+												</p>
+											</f:else>
+										</f:if>
+									</f:if>
+									<div class="news-preview">
+										<p>Image Gallery <em>(this is only visible in Neos backend)</em></p>
+										{content.gallery -> f:format.raw()}
+									</div>
+								</f:then>
+								<f:else>
+									<f:if condition="{content.galleryItemsCount} > 0">
+										<div id="gallery" class="image-gallery">
+											<div class="gallery-title">
+												<a href="{neos:uri.node(node:galleryNode)}"><i class="fa fa-camera"></i> Fotostrecke</a>
+											</div>
+
+											<ul class="list-inline text-center">
+												<f:for each="{content.galleryItems}" as="galleryItem">
+													<li>
+														<a href="{neos:uri.node(node:galleryNode)}" style="background-image: url('{media:uri.image(image:galleryItem.properties.image, maximumWidth:150, maximumHeight:150)}');">
+															<media:image image="{galleryItem.properties.image}" alt="{galleryItem.properties.title}" maximumWidth="150" maximumHeight="150" />
+														</a>
+													</li>
+												</f:for>
+											</ul>
+
+											<div class="text-right">
+												{content.galleryItemsCount} Bilder
+											</div>
+										</div>
+										<hr />
+									</f:if>
+								</f:else>
+							</f:if>
+
+
+
+							<div class="news-actions clearfix hidden-print">
+								<div class="pull-left share-button-list">
+									<ul class="list-inline">
+										<li class="facebook">
+											<a data-mode="popup" title="Auf Facebook teilen" href="https://www.facebook.com/sharer/sharer.php?u={neos:uri.node(node:node, absolute:true)}"><i class="fa fa-lg fa-facebook"></i> {facebookShares -> f:format.raw()} shares</a>
+										</li>
+										<li class="twitter">
+											<a data-mode="popup" title="Auf Twitter teilen" href="https://twitter.com/home?status={neos:uri.node(node:node, absolute:true)}"><i class="fa fa-lg fa-twitter"></i> {twitterShares -> f:format.raw()} tweets</a>
+										</li>
+										<li class="google">
+											<a data-mode="popup" title="Auf Google+ teilen" href="https://plus.google.com/share?url={neos:uri.node(node:node, absolute:true)}"><i class="fa fa-lg fa-google-plus"></i></a>
+										</li>
+										<li class="xing">
+											<a data-mode="popup" title="Auf Xing teilen" href="https://www.xing.com/app/user?op=share;url={neos:uri.node(node:node, absolute:true)}"><i class="fa fa-lg fa-xing"></i></a>
+										</li>
+										<li class="mail">
+											<a title="Per Mail teilen" href="#share-news" data-toggle="modal"><i class="fa fa-lg fa-envelope"></i></a>
+										</li>
+									</ul>
+								</div>
+								<div class="pull-right alert-button-list">
+									<ul class="list-inline">
+										<li><a href="javascript:window.print()"><i class="fa fa-2x fa-print"></i></a></li>
+										<li><a href="#report-news" data-toggle="modal"><i class="fa fa-2x fa-bell"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="news-forms">
+								<div class="modal fade" id="report-news">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h3>Was möchten Sie uns mitteilen?</h3>
+											</div>
+											<div class="modal-body">
+												{forms.report -> f:format.raw()}
+											</div>
+											<div class="modal-footer">
+											<p>Die Angabe Ihrer E-Mail-Adresse dient ausschließlich Übertragungszwecken. Diese wird nicht für Werbe- oder andere Zwecke verwendet.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="modal fade" id="share-news">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+												<h3>Empfehlen Sie diese Nachricht</h3>
+											</div>
+											<div class="modal-body">
+												{forms.recommend -> f:format.raw()}
+											</div>
+											<div class="modal-footer">
+											<p>Die Angabe Ihrer E-Mail-Adresse dient ausschließlich Übertragungszwecken. Diese wird nicht für Werbe- oder andere Zwecke verwendet.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+
+							<div class="hidden-print" data-widget="plista_widget_belowArticle"></div><br />
+							<div class="fb-comments hidden-print" data-href="{neos:uri.node(node:node, absolute:true)}" data-width="550" data-numposts="3"></div>
+
+						</div>
+						<aside class="col-md-6 hidden-xs hidden-sm hidden-print">
+							{content.sidebar -> f:format.raw()}
+						</aside>
+					</section>
+				</main>
+				<footer class="hidden-print">
+					<nav class="row">
+						<div class="col-md-16">
+							{parts.footerMenu -> f:format.raw()}
+
+							<f:render partial="Footer/SocialIcons" />
+						</div>
+					</nav>
+					<div class="row copyright">
+						<div class="col-md-12 text-center">
+							<neos:contentElement.wrap node="{node}">
+								<neos:contentElement.editable property="copyright" tag="span" />
+							</neos:contentElement.wrap>
+						</div>
+					</div>
+					<a href="#" class="anchor" title="nach oben"><span class="fa fa-chevron-circle-up"></span></a>
+				</footer>
+			</div>
+			<div class="col-md-3 hidden-sm hidden-xs ads-column hidden-print">
+				{content.rightAds -> f:format.raw()}
+			</div>
+		</div>
+	</div>
+</f:section>
+</body>
+</html>

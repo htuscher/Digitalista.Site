@@ -1,0 +1,1420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<site name="Digitalista" state="1" siteResourcesPackageKey="Jhoechtl.Digitalista" siteNodeName="digitalista">
+		<nodes formatVersion="2.0">
+			<node identifier="02eac95c-c462-459c-68a8-890816d48a76" nodeName="digitalista">
+				<variant sortingIndex="100" workspace="live" nodeType="Jhoechtl.Digitalista:FrontPage" version="5"
+						 removed="" hidden="" hiddenInIndex="">
+					<dimensions/>
+					<accessRoles __type="array"/>
+					<creationDateTime __type="object" __classname="DateTime">2015-04-12T10:20:24+00:00
+					</creationDateTime>
+					<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T19:57:36+00:00
+					</lastModificationDateTime>
+					<properties>
+						<title __type="string">Home</title>
+						<uriPathSegment __type="string">home</uriPathSegment>
+						<canonicalLink __type="string"></canonicalLink>
+						<copyright __type="string">Title hier eingeben</copyright>
+						<titleOverride __type="string"></titleOverride>
+						<metaDescription __type="string"></metaDescription>
+						<metaKeywords __type="string"></metaKeywords>
+						<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+						<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+						<twitterCardType __type="string"></twitterCardType>
+						<twitterCardCreator __type="string"></twitterCardCreator>
+						<twitterCardTitle __type="string"></twitterCardTitle>
+						<twitterCardDescription __type="string"></twitterCardDescription>
+						<twitterCardImage __type="string"></twitterCardImage>
+						<layout __type="string">frontPage</layout>
+						<subpageLayout __type="string"></subpageLayout>
+						<topTopicsBanderole __type="string">Die &lt;em&gt;Topthemen&lt;/em&gt;</topTopicsBanderole>
+						<newsBarBanderole __type="string">Die &lt;em&gt;News&lt;/em&gt;</newsBarBanderole>
+					</properties>
+				</variant>
+				<node identifier="f4af1aeb-a68b-985f-a912-aef9541cbca0" nodeName="main">
+					<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T14:03:25+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:08:45+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T14:08:45+00:00
+						</lastPublicationDateTime>
+						<properties/>
+					</variant>
+					<node identifier="f4937afa-9f86-2292-b61e-72a041dc9f10" nodeName="text1">
+						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text" version="2"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-13T18:51:25+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T19:15:37+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-13T19:15:37+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<text __type="string">&lt;p&gt;This is the
+									&lt;em&gt;homepage&lt;/em&gt;&lt;/p&gt;</text>
+							</properties>
+						</variant>
+					</node>
+				</node>
+				<node identifier="af2f8e95-5b04-815a-f871-7552f9c4de82" nodeName="node-552a4754e838f">
+					<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="8"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T10:22:12+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:08:45+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T10:22:14+00:00
+						</lastPublicationDateTime>
+						<properties>
+							<uriPathSegment __type="string">news</uriPathSegment>
+							<canonicalLink __type="string"></canonicalLink>
+							<title __type="string">News</title>
+							<titleOverride __type="string"></titleOverride>
+							<metaDescription __type="string"></metaDescription>
+							<metaKeywords __type="string"></metaKeywords>
+							<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+							<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+							<twitterCardType __type="string"></twitterCardType>
+							<twitterCardCreator __type="string"></twitterCardCreator>
+							<twitterCardTitle __type="string"></twitterCardTitle>
+							<twitterCardDescription __type="string"></twitterCardDescription>
+							<twitterCardImage __type="string"></twitterCardImage>
+							<layout __type="string"></layout>
+							<subpageLayout __type="string"></subpageLayout>
+							<copyright __type="string">Title hier eingeben</copyright>
+						</properties>
+					</variant>
+					<node identifier="fb04f90e-5363-ec24-fc44-869a0fdfb93b" nodeName="main">
+						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T10:22:12+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T10:22:14+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T10:22:14+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="5de2dd59-20fe-6f14-ac8f-ea001c62c069" nodeName="node-552a7696e90a3">
+						<variant sortingIndex="350" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="4"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:43:56+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">web</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Web</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="76c23066-3136-ced6-f9bb-131bd5d753ec" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:43:56+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="bba8df66-a902-f0cd-dd4e-992ec5f177d2" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:43:56+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="3e18c81d-0120-edb9-785d-41e56a2cc2f9" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="1830e304-b106-6f72-56cb-4dff815b29f9" nodeName="node-552a76a632ec9">
+						<variant sortingIndex="400" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:06+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">wirtschaft</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Wirtschaft</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="da5fca81-bfa9-c1bc-db90-d063f0d2cc1e" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:06+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="0d652056-397a-b075-7275-5df9fdd09d95" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:06+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="8ef73ce4-087a-045b-9aea-e6ad98d68c69" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="53e637e4-170d-ce21-19e6-c96384da5459" nodeName="node-552a76aa6efb1">
+						<variant sortingIndex="450" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:10+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">mobiles</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Mobiles</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="c2ca1d56-af88-496b-a7b6-bbcab71e26b0" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:10+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="9a9f07b6-cfc2-eb37-8427-2348e263e130" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:10+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="ce130bef-b2ec-2390-99ff-5aef36220ead" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="ea6d60f8-1417-bb79-c31a-3a6bca96a2c2" nodeName="node-552a76afa6f0b">
+						<variant sortingIndex="500" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:15+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">netzpolitik</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Netzpolitik</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="8749e0a9-8ac8-84bb-f5a0-ed67da00f88a" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:15+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="bf2da102-b699-cded-6ba1-0d6802767579" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:15+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="c20f21ac-8891-7475-dc1e-5e9a51b717a6" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="7449f410-bc8a-9b8e-e627-5f15900401b8" nodeName="node-552a76b47b3cc">
+						<variant sortingIndex="550" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:20+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">hardware</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Hardware</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="ff504273-cc3d-4e8d-1a8f-b546dad24d58" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:20+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="0a23ce18-c055-a236-ce15-f9f2c66d213d" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:20+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="671944ba-1ce4-710c-99d4-ff177ad59298" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="bae7f232-e8b7-9575-0a5d-682c83143318" nodeName="node-552a76b8cf95c">
+						<variant sortingIndex="600" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:24+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">games</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Games</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="4a3fa3cb-9e34-542b-94a3-238616dee68d" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:24+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="2480435f-8c84-8cc6-5c30-4e0a5e6d28d2" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:24+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="3df02f5f-4ca8-38fa-8eb8-1349d5076d2b" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="3058087b-a60c-8b7a-421e-fae42e28092d" nodeName="node-552a76bcdbbc2">
+						<variant sortingIndex="650" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:28+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">fun</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Fun</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="22075c0c-465e-70fc-74a1-328194302d6f" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:28+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="b3857f3a-226a-f76b-611a-b899777d8c54" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:28+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:48:09+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="ddc49d92-40c4-b21a-0f16-3f9dd19a717e" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="318d8200-e239-d4dd-b532-f5e95feb656f" nodeName="rightAds">
+						<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:04:52+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:04:52+00:00
+							</lastModificationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="b86ddb8d-8966-c7c6-150c-b26a2618b863" nodeName="sidebar">
+						<variant sortingIndex="750" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</lastModificationDateTime>
+							<properties/>
+						</variant>
+					</node>
+				</node>
+				<node identifier="54cfd770-795e-1ac0-cb96-c54f03b46f58" nodeName="node-552a76c5d6064">
+					<variant sortingIndex="400" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:37+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+						</lastPublicationDateTime>
+						<properties>
+							<uriPathSegment __type="string">interviews</uriPathSegment>
+							<canonicalLink __type="string"></canonicalLink>
+							<copyright __type="string">Title hier eingeben</copyright>
+							<title __type="string">Interviews</title>
+							<titleOverride __type="string"></titleOverride>
+							<metaDescription __type="string"></metaDescription>
+							<metaKeywords __type="string"></metaKeywords>
+							<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+							<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+							<twitterCardType __type="string"></twitterCardType>
+							<twitterCardCreator __type="string"></twitterCardCreator>
+							<twitterCardTitle __type="string"></twitterCardTitle>
+							<twitterCardDescription __type="string"></twitterCardDescription>
+							<twitterCardImage __type="string"></twitterCardImage>
+							<layout __type="string"></layout>
+							<subpageLayout __type="string"></subpageLayout>
+						</properties>
+					</variant>
+					<node identifier="08350bd5-9d49-53d8-e9c5-3202638f995d" nodeName="main">
+						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:37+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="57825f7c-7303-b5d2-9f0c-4ee3eb3d13a1" nodeName="rightAds">
+						<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:37+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="e6ca0598-eb3e-2d56-d7e5-112133c6eded" nodeName="sidebar">
+						<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</lastModificationDateTime>
+							<properties/>
+						</variant>
+					</node>
+				</node>
+				<node identifier="daf46f49-0337-be94-f506-fddf6a8647e7" nodeName="node-552a76cad074b">
+					<variant sortingIndex="450" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:42+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+						</lastPublicationDateTime>
+						<properties>
+							<uriPathSegment __type="string">sounds</uriPathSegment>
+							<canonicalLink __type="string"></canonicalLink>
+							<copyright __type="string">Title hier eingeben</copyright>
+							<title __type="string">Sounds</title>
+							<titleOverride __type="string"></titleOverride>
+							<metaDescription __type="string"></metaDescription>
+							<metaKeywords __type="string"></metaKeywords>
+							<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+							<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+							<twitterCardType __type="string"></twitterCardType>
+							<twitterCardCreator __type="string"></twitterCardCreator>
+							<twitterCardTitle __type="string"></twitterCardTitle>
+							<twitterCardDescription __type="string"></twitterCardDescription>
+							<twitterCardImage __type="string"></twitterCardImage>
+							<layout __type="string"></layout>
+							<subpageLayout __type="string"></subpageLayout>
+						</properties>
+					</variant>
+					<node identifier="354df452-b1e4-b438-b737-ae250fdf1cd0" nodeName="main">
+						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:42+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="da8f4f6e-9426-39ab-33f7-053dfb0b8098" nodeName="rightAds">
+						<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:42+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="58cbc27f-ba66-b7cf-bf6e-90bb83d8c6a5" nodeName="sidebar">
+						<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</lastModificationDateTime>
+							<properties/>
+						</variant>
+					</node>
+				</node>
+				<node identifier="b77344e9-20fd-5e3b-c4fa-dd7a738a4413" nodeName="node-552a76cf28d93">
+					<variant sortingIndex="500" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:47+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+						</lastPublicationDateTime>
+						<properties>
+							<uriPathSegment __type="string">retro</uriPathSegment>
+							<canonicalLink __type="string"></canonicalLink>
+							<copyright __type="string">Title hier eingeben</copyright>
+							<title __type="string">Retro</title>
+							<titleOverride __type="string"></titleOverride>
+							<metaDescription __type="string"></metaDescription>
+							<metaKeywords __type="string"></metaKeywords>
+							<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+							<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+							<twitterCardType __type="string"></twitterCardType>
+							<twitterCardCreator __type="string"></twitterCardCreator>
+							<twitterCardTitle __type="string"></twitterCardTitle>
+							<twitterCardDescription __type="string"></twitterCardDescription>
+							<twitterCardImage __type="string"></twitterCardImage>
+							<layout __type="string"></layout>
+							<subpageLayout __type="string"></subpageLayout>
+						</properties>
+					</variant>
+					<node identifier="190087a0-8fd8-b51b-e596-f6f4446af94f" nodeName="main">
+						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:47+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="ebfa532e-2599-b43d-2ac8-5ad7fec298e3" nodeName="rightAds">
+						<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:44:47+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:09+00:00
+							</lastPublicationDateTime>
+							<properties/>
+						</variant>
+					</node>
+					<node identifier="56cc53b3-550b-71a1-b869-1d87a191cb2b" nodeName="sidebar">
+						<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+							</lastModificationDateTime>
+							<properties/>
+						</variant>
+					</node>
+				</node>
+				<node identifier="d7ce0cae-620c-fb2e-7351-756f72cc2ee1" nodeName="node-552a777951004">
+					<variant sortingIndex="600" workspace="live" nodeType="TYPO3.Neos:Shortcut" version="4" removed=""
+							 hidden="" hiddenInIndex="1">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:47:37+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:06+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:06+00:00
+						</lastPublicationDateTime>
+						<properties>
+							<uriPathSegment __type="string">seiten</uriPathSegment>
+							<targetMode __type="string">firstChildNode</targetMode>
+							<title __type="string">Footer</title>
+							<target __type="string"></target>
+						</properties>
+					</variant>
+					<node identifier="34a55bd6-ed5b-3c9e-bf1d-6c30959018e4" nodeName="node-552a77b4a14a6">
+						<variant sortingIndex="750" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="4"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:39+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:07+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">ueber-uns</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Über uns</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="ecd57800-90da-6079-82e7-4e32d2957b78" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:07+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="9eefb795-35f0-505b-05d5-ed8f0834188c" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:07+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="ab51c8fa-48c2-b265-1292-8ce350373a63" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="06a91269-c78f-f041-4be2-01b5e5b95982" nodeName="node-552a77be53275">
+						<variant sortingIndex="800" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:46+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:07+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">kontakt</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Kontakt</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="4f121984-cda3-c204-81ba-78b3c425ec45" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:46+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:07+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="1862bac7-3546-0af7-309e-b581b2240e87" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:46+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:07+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="b7c0a3db-81e8-f89f-6188-3c87fdeacb80" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="92f73ad9-9b4a-fa06-3423-e60487e315b2" nodeName="node-552a77c35e41f">
+						<variant sortingIndex="850" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:51+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:07+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">archiv</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Archiv</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="363ece59-6ffd-f831-a0d2-d05754926368" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:51+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:07+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="f1ea7065-fcef-bcb1-b2dc-f58bbb72f152" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:51+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:07+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="99acc2c3-c546-1382-fbaa-47af2b5800d6" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="12700ec0-4b5e-5094-9443-85a07968f2b7" nodeName="node-552a77c845995">
+						<variant sortingIndex="900" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:56+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:07+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">impressum</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Impressum</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="6e1b863d-59f3-21a1-0350-5952285fd7cb" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:56+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+							<node identifier="0587be7a-91a6-6d93-f516-e3b3f577206c" nodeName="node-552a7a1b2b8e0">
+								<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text"
+										 version="7" removed="" hidden="" hiddenInIndex="">
+									<dimensions/>
+									<accessRoles __type="array"/>
+									<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:58:51+00:00
+									</creationDateTime>
+									<lastModificationDateTime __type="object" __classname="DateTime">
+										2015-04-12T13:59:07+00:00
+									</lastModificationDateTime>
+									<lastPublicationDateTime __type="object" __classname="DateTime">
+										2015-04-12T13:59:07+00:00
+									</lastPublicationDateTime>
+									<properties>
+										<text __type="string">&lt;p&gt;Jasmin Kirchesch&lt;/p&gt;&lt;p&gt;Lindwurmstraße
+											11&lt;br/&gt;80337 München &lt;/p&gt;&lt;p&gt;Tel.:    &lt;a target=&quot;_blank&quot;&gt;+49
+											(0) 89 / 209 374 99&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Fax:    &lt;a target=&quot;_blank&quot;&gt;+49
+											(0) 89 / 209 364 86&lt;/a&gt;&lt;/p&gt;&lt;p&gt;E-Mail: &lt;a&gt;redaktion
+											at digitalista.de&lt;/a&gt; &lt;br/&gt;Web:   &lt;a href=&quot;http://www.digitalista.de/&quot;
+											target=&quot;_blank&quot;&gt;www.digitalista.de&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Inhaltlich
+											verantwortlich gemäß § 5 TMG:&lt;br/&gt;&lt;i&gt;Jasmin Kirchesch&lt;/i&gt;&lt;/p&gt;</text>
+									</properties>
+								</variant>
+							</node>
+						</node>
+						<node identifier="cc417a76-c6f7-b792-fab9-2d4afdc5a4b2" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:48:56+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="6eac7aea-5c5b-8ade-4827-6f4fbbb74eb7" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+					<node identifier="014f7f36-4ad1-3dbe-28c4-5085bf4bfe30" nodeName="node-552a77cd02713">
+						<variant sortingIndex="950" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Page" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:01+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T14:10:25+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:08+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<uriPathSegment __type="string">datenschutz</uriPathSegment>
+								<canonicalLink __type="string"></canonicalLink>
+								<copyright __type="string">Title hier eingeben</copyright>
+								<title __type="string">Datenschutz</title>
+								<titleOverride __type="string"></titleOverride>
+								<metaDescription __type="string"></metaDescription>
+								<metaKeywords __type="string"></metaKeywords>
+								<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+								<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+								<twitterCardType __type="string"></twitterCardType>
+								<twitterCardCreator __type="string"></twitterCardCreator>
+								<twitterCardTitle __type="string"></twitterCardTitle>
+								<twitterCardDescription __type="string"></twitterCardDescription>
+								<twitterCardImage __type="string"></twitterCardImage>
+								<layout __type="string"></layout>
+								<subpageLayout __type="string"></subpageLayout>
+							</properties>
+						</variant>
+						<node identifier="2d4e353f-aa7d-24c3-e1f3-0503b6f445bc" nodeName="main">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:01+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="643c5b58-aa74-06e0-62c1-ace9861e9580" nodeName="rightAds">
+							<variant sortingIndex="200" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:49:01+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-12T13:49:08+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+						<node identifier="e3bc1099-26f3-c63b-eb24-65e4880e2de4" nodeName="sidebar">
+							<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="2" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T13:47:39+00:00
+								</lastModificationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+				</node>
+				<node identifier="263a6ec3-255c-39b1-2eb2-0484b2284c41" nodeName="node-552c1988cd32e">
+					<variant sortingIndex="800" workspace="live" nodeType="Jhoechtl.Digitalista:Folder" version="4"
+							 removed="" hidden="" hiddenInIndex="1">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-13T19:31:20+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T19:34:27+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-13T19:31:23+00:00
+						</lastPublicationDateTime>
+						<properties>
+							<uriPathSegment __type="string">Tags</uriPathSegment>
+							<canonicalLink __type="string"></canonicalLink>
+							<title __type="string">Tags</title>
+							<titleOverride __type="string"></titleOverride>
+							<metaDescription __type="string"></metaDescription>
+							<metaKeywords __type="string"></metaKeywords>
+							<metaRobotsNoindex __type="boolean"></metaRobotsNoindex>
+							<metaRobotsNofollow __type="boolean"></metaRobotsNofollow>
+							<twitterCardType __type="string"></twitterCardType>
+							<twitterCardCreator __type="string"></twitterCardCreator>
+							<twitterCardTitle __type="string"></twitterCardTitle>
+							<twitterCardDescription __type="string"></twitterCardDescription>
+							<twitterCardImage __type="string"></twitterCardImage>
+						</properties>
+					</variant>
+				</node>
+				<node identifier="868d1b28-7710-80ae-81e6-8c7561acbfb3" nodeName="rightAds">
+					<variant sortingIndex="300" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-12T13:04:52+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T13:04:52+00:00
+						</lastModificationDateTime>
+						<properties/>
+					</variant>
+					<node identifier="1e51afde-d416-5681-da6e-492273ff5e23" nodeName="node-552aa5b2e2afc">
+						<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos.NodeTypes:Text" version="5"
+								 removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-12T17:04:50+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-12T17:05:01+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-12T17:05:01+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<text __type="string">&lt;p&gt;This is Ads&lt;/p&gt;</text>
+							</properties>
+						</variant>
+					</node>
+				</node>
+				<node identifier="1b11ca23-24aa-ef4e-8997-7abbc5c562b9" nodeName="sidebar">
+					<variant sortingIndex="700" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="2"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T13:47:39+00:00
+						</lastModificationDateTime>
+						<properties/>
+					</variant>
+					<node identifier="f24e4f6e-b472-7a2b-fe37-d011f41c27b6" nodeName="node-552c15eb2d27d">
+						<variant sortingIndex="150" workspace="live" nodeType="Jhoechtl.Digitalista:SidebarPanel"
+								 version="4" removed="" hidden="" hiddenInIndex="">
+							<dimensions/>
+							<accessRoles __type="array"/>
+							<creationDateTime __type="object" __classname="DateTime">2015-04-13T19:15:55+00:00
+							</creationDateTime>
+							<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T19:16:21+00:00
+							</lastModificationDateTime>
+							<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-13T19:16:21+00:00
+							</lastPublicationDateTime>
+							<properties>
+								<panelTitle __type="string">The &lt;em&gt;Panel&lt;/em&gt;</panelTitle>
+							</properties>
+						</variant>
+						<node identifier="4aeef937-f240-3aa7-4d50-1b28a7d035a9" nodeName="panelBody">
+							<variant sortingIndex="100" workspace="live" nodeType="TYPO3.Neos:ContentCollection"
+									 version="3" removed="" hidden="" hiddenInIndex="">
+								<dimensions/>
+								<accessRoles __type="array"/>
+								<creationDateTime __type="object" __classname="DateTime">2015-04-13T19:15:55+00:00
+								</creationDateTime>
+								<lastModificationDateTime __type="object" __classname="DateTime">
+									2015-04-13T19:16:21+00:00
+								</lastModificationDateTime>
+								<lastPublicationDateTime __type="object" __classname="DateTime">
+									2015-04-13T19:16:21+00:00
+								</lastPublicationDateTime>
+								<properties/>
+							</variant>
+						</node>
+					</node>
+				</node>
+				<node identifier="2a91c6fe-718b-3d7a-34c4-1143a534e3db" nodeName="topTopics">
+					<variant sortingIndex="900" workspace="live" nodeType="TYPO3.Neos:ContentCollection" version="3"
+							 removed="" hidden="" hiddenInIndex="">
+						<dimensions/>
+						<accessRoles __type="array"/>
+						<creationDateTime __type="object" __classname="DateTime">2015-04-13T19:57:30+00:00
+						</creationDateTime>
+						<lastModificationDateTime __type="object" __classname="DateTime">2015-04-13T19:57:36+00:00
+						</lastModificationDateTime>
+						<lastPublicationDateTime __type="object" __classname="DateTime">2015-04-13T19:57:36+00:00
+						</lastPublicationDateTime>
+						<properties/>
+					</variant>
+				</node>
+			</node>
+		</nodes>
+	</site>
+</root>

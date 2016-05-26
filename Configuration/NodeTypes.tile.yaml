@@ -1,0 +1,179 @@
+
+'Jhoechtl.Digitalista:Tile':
+  superTypes:
+    'TYPO3.Neos:Content': true
+    'TYPO3.Neos.NodeTypes:ContentImageMixin': true
+  ui:
+    icon: ' icon-star'
+    label: Tile
+    inlineEditable: true
+  properties:
+    hasCaption:
+      ui:
+        inspector:
+          group: null
+    alignment:
+      ui:
+        inspector:
+          group: null
+    caption:
+      defaultValue: Titel
+      ui:
+        aloha:
+          format: {  }
+          table: {  }
+          link: {  }
+          list: {  }
+          alignment: {  }
+    image:
+      ui:
+        inspector:
+          editorOptions:
+            crop:
+              aspectRatio:
+                options:
+                  square: false
+                  fourFive: false
+                  fiveSeven: false
+                  twoThree: false
+                  fourThree: false
+                  sixteenNine: false
+                  tile-1y-100per:
+                    width: 885
+                    height: 182
+                    label: 'Breite: 100% - Höhe: 100%'
+                  tile-2y-100per:
+                    width: 885
+                    height: 364
+                    label: 'Breite: 100% - Höhe: 200%'
+                  tile-3y-100per:
+                    width: 885
+                    height: 546
+                    label: 'Breite: 100% - Höhe: 300%'
+                  tile-1y-50per:
+                    width: 440
+                    height: 182
+                    label: 'Breite: 50% - Höhe: 100%'
+                  tile-2y-50per:
+                    width: 440
+                    height: 364
+                    label: 'Breite: 50% - Höhe: 200%'
+                  tile-3y-50per:
+                    width: 440
+                    height: 546
+                    label: 'Breite: 50% - Höhe: 300%'
+                  tile-1y-25per:
+                    width: 216
+                    height: 182
+                    label: 'Breite: 25% - Höhe: 100%'
+                  tile-2y-25per:
+                    width: 216
+                    height: 364
+                    label: 'Breite: 25% - Höhe: 200%'
+                  tile-3y-25per:
+                    width: 216
+                    height: 546
+                    label: 'Breite: 25% - Höhe: 300%'
+                enableOriginal: false
+                allowCustom: false
+    heightMultiplier:
+      type: integer
+      ui:
+        label: 'Height Factor'
+        reloadIfChanged: true
+        inspector:
+          group: image
+          editor: TYPO3.Neos/Inspector/Editors/SelectBoxEditor
+          editorOptions:
+            placeholder: Normal
+            values:
+              1:
+                label: Normal
+              2:
+                label: Double
+              3:
+                label: Triple
+'Jhoechtl.Digitalista:TileTwoColumn':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:TwoColumn': true
+  childNodes:
+    column0:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+    column1:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+'Jhoechtl.Digitalista:TileThreeColumn':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:ThreeColumn': true
+  childNodes:
+    column0:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+    column1:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+    column2:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+'Jhoechtl.Digitalista:TileFourColumn':
+  superTypes:
+    'TYPO3.Neos.NodeTypes:FourColumn': true
+  childNodes:
+    column0:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+    column1:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+    column2:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true
+    column3:
+      constraints:
+        nodeTypes:
+          '*': false
+          'Jhoechtl.Digitalista:Tile': true
+          'Jhoechtl.Digitalista:TileTwoColumn': true
+          'Jhoechtl.Digitalista:TileThreeColumn': true
+          'Jhoechtl.Digitalista:TileFourColumn': true

@@ -1,0 +1,4 @@
+prototype(Jhoechtl.Digitalista:GalleryItem) < prototype(TYPO3.Neos.NodeTypes:Image)
+prototype(Jhoechtl.Digitalista:GalleryItem) {
+	maximumWidth = 250
+}
